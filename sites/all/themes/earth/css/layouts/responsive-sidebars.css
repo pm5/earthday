@@ -1,0 +1,117 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/*
+ * Center the page.
+ */
+/* line 45, ../../sass/layouts/responsive-sidebars.scss */
+#header,
+#highlighted,
+#main,
+#footer,
+#footer-left-right {
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text
+     by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* line 56, ../../sass/layouts/responsive-sidebars.scss */
+#header-wrapper,
+#highlighted-wrapper,
+#main-wrapper,
+#footer-wrapper {
+  clear: left;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+/* line 70, ../../sass/layouts/responsive-sidebars.scss */
+#header,
+#highlighted,
+#main,
+#footer,
+#footer-left-right {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  clear: left;
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:before, #header:after,
+#highlighted:before,
+#highlighted:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after,
+#footer-left-right:before,
+#footer-left-right:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:after,
+#highlighted:after,
+#main:after,
+#footer:after,
+#footer-left-right:after {
+  clear: both;
+}
+
+@media all and (min-width: 960px) {
+  /*
+   * Use 12 grid columns for larger screens.
+   */
+  /* line 93, ../../sass/layouts/responsive-sidebars.scss */
+  .region-header {
+    float: right;
+    width: 25%;
+    margin-right: 0%;
+    margin-left: -25%;
+  }
+
+  /* line 97, ../../sass/layouts/responsive-sidebars.scss */
+  #navigation {
+    clear: both;
+    float: left;
+    width: 91.66667%;
+    margin-left: 8.33333%;
+    margin-right: -100%;
+  }
+
+  /* line 102, ../../sass/layouts/responsive-sidebars.scss */
+  #footer-left-right .region-footer-left {
+    clear: left;
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+  }
+
+  /* line 107, ../../sass/layouts/responsive-sidebars.scss */
+  #footer-left-right .region-footer-right {
+    clear: right;
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+}
