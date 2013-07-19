@@ -15,12 +15,10 @@
   #highlighted-wrapper,
   #main,
   #main-wrapper,
-  .region-sidebar-first,
-  .region-sidebar-second,
   #footer,
   #footer-left-right,
   #footer-wrapper,
-  .region-bottom {
+  .region {
     outline: 1px solid #ccc;
 
     @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {

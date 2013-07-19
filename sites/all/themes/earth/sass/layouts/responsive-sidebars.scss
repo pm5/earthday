@@ -55,7 +55,6 @@ $zen-auto-include-item-base: false;
 #main-wrapper,
 #footer-wrapper {
   @include zen-clear();
-
 }
 
 /*
@@ -82,6 +81,7 @@ $zen-auto-include-item-base: false;
 #footer,
 #footer-left-right {
   @include zen-grid-container();
+  @include zen-grid-background();
 }
 
 @media all and (min-width: 960px) {
@@ -109,7 +109,18 @@ $zen-auto-include-item-base: false;
     @include zen-grid-item(6, 1, right);
   }
 
-  #content .column-left {
+  #content {
+    .views-row-1, .views-row-4 {
+      @include zen-clear(left);
+      @include zen-grid-item(4, 1);
+    }
+    .views-row-2, .views-row-5 {
+      @include zen-grid-item(4, 5);
+    }
+    .views-row-3, .views-row-6 {
+      @include zen-clear(right);
+      @include zen-grid-item(4, 9);
+    }
   }
 
 }
