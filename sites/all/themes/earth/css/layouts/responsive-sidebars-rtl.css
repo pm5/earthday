@@ -121,8 +121,31 @@
     margin-right: 0%;
     margin-left: -50%;
   }
+  /* line 106, ../../sass/layouts/responsive-sidebars.scss */
+  #footer-left-right .region-footer-left .views-row-1, #footer-left-right .region-footer-left .views-row-4 {
+    clear: right;
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 110, ../../sass/layouts/responsive-sidebars.scss */
+  #footer-left-right .region-footer-left .views-row-2, #footer-left-right .region-footer-left .views-row-5 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 113, ../../sass/layouts/responsive-sidebars.scss */
+  #footer-left-right .region-footer-left .views-row-3, #footer-left-right .region-footer-left .views-row-6 {
+    clear: left;
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
 
-  /* line 107, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 119, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right {
     clear: left;
     float: left;
@@ -130,8 +153,23 @@
     margin-left: 0%;
     margin-right: -50%;
   }
+  /* line 123, ../../sass/layouts/responsive-sidebars.scss */
+  #footer-left-right .region-footer-right .panel-pane {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    width: 33.33333%;
+    padding-right: 0;
+    padding-left: 13.33333px;
+    margin-left: -13.33333px;
+  }
 
-  /* line 113, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 130, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-1, #content .views-row-4 {
     clear: right;
     float: right;
@@ -139,14 +177,14 @@
     margin-right: 0%;
     margin-left: -33.33333%;
   }
-  /* line 117, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 134, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-2, #content .views-row-5 {
     float: right;
     width: 33.33333%;
     margin-right: 33.33333%;
     margin-left: -66.66667%;
   }
-  /* line 120, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 137, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-3, #content .views-row-6 {
     clear: left;
     float: right;
