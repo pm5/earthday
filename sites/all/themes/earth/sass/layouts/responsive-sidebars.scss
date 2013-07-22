@@ -102,11 +102,28 @@ $zen-auto-include-item-base: false;
   #footer-left-right .region-footer-left {
     @include zen-clear(left);
     @include zen-grid-item(6, 1);
+
+    .views-row-1, .views-row-4 {
+      @include zen-clear(left);
+      @include zen-grid-item(4, 1);
+    }
+    .views-row-2, .views-row-5 {
+      @include zen-grid-item(4, 5);
+    }
+    .views-row-3, .views-row-6 {
+      @include zen-clear(right);
+      @include zen-grid-item(4, 9);
+    }
   }
 
   #footer-left-right .region-footer-right {
     @include zen-clear(right);
     @include zen-grid-item(6, 1, right);
+
+    .panel-pane {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12, false, false)
+    }
   }
 
   #content {
