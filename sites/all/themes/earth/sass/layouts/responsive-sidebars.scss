@@ -81,7 +81,7 @@ $zen-auto-include-item-base: false;
 #footer,
 #footer-left-right {
   @include zen-grid-container();
-  @include zen-grid-background();
+  /* @include zen-grid-background(); */
 }
 
 @media all and (min-width: 960px) {
