@@ -81,7 +81,7 @@ $zen-auto-include-item-base: false;
 #footer,
 #footer-left-right {
   @include zen-grid-container();
-  /* @include zen-grid-background(); */
+  @include zen-grid-background();
 }
 
 @media all and (min-width: 960px) {
@@ -99,9 +99,18 @@ $zen-auto-include-item-base: false;
     @include zen-grid-item(11, 2);
   }
 
+  .region-highlighted {
+    @include zen-grid-item(10, 2);
+  }
+
   #footer-left-right .region-footer-left {
     @include zen-clear(left);
     @include zen-grid-item(6, 1);
+
+    .block {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+    }
 
     .views-row-1, .views-row-4 {
       @include zen-clear(left);
@@ -119,6 +128,11 @@ $zen-auto-include-item-base: false;
   #footer-left-right .region-footer-right {
     @include zen-clear(right);
     @include zen-grid-item(6, 1, right);
+
+    .block {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+    }
 
     .panel-pane {
       @include zen-float(left);

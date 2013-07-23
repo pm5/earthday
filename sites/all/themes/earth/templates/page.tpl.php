@@ -81,14 +81,13 @@
 
       <?php if ($site_name || $site_slogan): ?>
         <hgroup id="name-and-slogan">
-          <?php if ($site_name): ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-
           <?php if ($site_slogan): ?>
-            <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+            <h1 id="site-slogan"><?php print $site_slogan; ?></h1>
+          <?php endif; ?>
+          <?php if ($site_name): ?>
+            <h2 id="site-name">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            </h2>
           <?php endif; ?>
         </hgroup><!-- /#name-and-slogan -->
       <?php endif; ?>
@@ -111,6 +110,17 @@
 
       <?php print render($page['header']); ?>
 
+    </header>
+  </div>
+
+  <div id="highlighted-wrapper">
+    <div id="highlighted">
+      <?php print render($page['highlighted']); ?>
+    </div>
+  </div>
+
+  <div id="main-wrapper">
+    <div id="main">
       <div id="navigation">
 
         <?php if ($main_menu): ?>
@@ -138,17 +148,7 @@
 
       </div><!-- /#navigation -->
 
-    </header>
-  </div>
 
-  <div id="highlighted-wrapper">
-    <div id="highlighted">
-      <?php print render($page['highlighted']); ?>
-    </div>
-  </div>
-
-  <div id="main-wrapper">
-    <div id="main">
       <div id="content" class="column" role="main">
         <?php print $breadcrumb; ?>
         <a id="main-content"></a>
