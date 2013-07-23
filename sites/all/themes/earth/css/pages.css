@@ -60,26 +60,26 @@ body {
 #site-name {
   /* The name of the website */
   margin: 0;
-  font-size: 2em;
-  line-height: 1.5em;
+  font-size: 1em;
 }
-/* line 71, ../sass/pages.scss */
+/* line 70, ../sass/pages.scss */
 #site-name a:link,
 #site-name a:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 77, ../sass/pages.scss */
+/* line 76, ../sass/pages.scss */
 #site-name a:hover,
 #site-name a:focus {
   text-decoration: underline;
 }
 
-/* line 82, ../sass/pages.scss */
+/* line 81, ../sass/pages.scss */
 #site-slogan {
   /* The slogan (or tagline) of a website */
   margin: 0;
-  font-size: 1em;
+  line-height: 1.5em;
+  font-size: 2em;
 }
 
 /*
