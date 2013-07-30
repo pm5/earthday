@@ -113,12 +113,6 @@
     </header>
   </div>
 
-  <div id="highlighted-wrapper">
-    <div id="highlighted">
-      <?php print render($page['highlighted']); ?>
-    </div>
-  </div>
-
   <div id="main-wrapper">
     <div id="main">
       <div id="navigation">
@@ -148,6 +142,11 @@
 
       </div><!-- /#navigation -->
 
+      <div id="highlighted-wrapper">
+        <div id="highlighted">
+          <?php print render($page['highlighted']); ?>
+        </div>
+      </div>
 
       <div id="content" class="column" role="main">
         <?php print $breadcrumb; ?>
