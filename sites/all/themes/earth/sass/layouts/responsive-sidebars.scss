@@ -30,8 +30,8 @@ $zen-gutter-width:  20px;
 
 // You can generate more efficient CSS if you manually apply the
 // zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: false;
-// $zen-auto-include-flow-item-base: false;
+$zen-auto-include-item-base: true;
+$zen-auto-include-flow-item-base: true;
 
 
 /*
@@ -45,8 +45,7 @@ $zen-auto-include-item-base: false;
 #footer-left-right { 
   /* For screen sizes larger than 1200px, prevent excessively long lines of text
      by setting a max-width. */
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 1024px;
 }
 
@@ -67,8 +66,8 @@ $zen-auto-include-item-base: false;
 #main,
 #footer,
 #footer-left-right {
-  @include zen-grid-item-base();
-  @include zen-clear();
+  // XXX not sure how to use
+  //@include zen-grid-item-base();
 }
 
 /*
@@ -98,6 +97,22 @@ $zen-auto-include-item-base: false;
    * Use 12 grid columns for larger screens.
    */
   $zen-column-count: 12;
+
+  #logo {
+    @include zen-grid-item(1, 1);
+  }
+
+  #name-and-slogan {
+    margin-top: 14px;
+    h1 {
+      @include zen-grid-item(5, 2);
+    }
+    h2 {
+      @include zen-grid-item(4, 6);
+      margin-top: 14px;
+    }
+  }
+
 
   .region-header {
     @include zen-grid-item(3, 1, right);
@@ -160,26 +175,6 @@ $zen-auto-include-item-base: false;
     .views-row-3, .views-row-6 {
       @include zen-clear(right);
       @include zen-grid-item(4, 9);
-    }
-  }
-
-  #logo {
-    @include zen-grid-item(1, 1);
-  }
-
-  #name-and-slogan {
-    @include zen-grid-item(8, 2);
-    $zen-column-count: 8;
-    @include zen-grid-container();
-    position: relative;
-
-    h1 {
-      @include zen-grid-item(4, 1);
-    }
-    h2 {
-      position: absolute;
-      bottom: 0;
-      @include zen-grid-item(4, 5);
     }
   }
 

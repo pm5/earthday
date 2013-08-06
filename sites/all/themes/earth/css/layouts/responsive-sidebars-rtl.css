@@ -23,12 +23,11 @@
 #footer-left-right {
   /* For screen sizes larger than 1200px, prevent excessively long lines of text
      by setting a max-width. */
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 1024px;
 }
 
-/* line 56, ../../sass/layouts/responsive-sidebars.scss */
+/* line 55, ../../sass/layouts/responsive-sidebars.scss */
 #header-wrapper,
 #highlighted-wrapper,
 #main-wrapper,
@@ -39,22 +38,6 @@
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
  */
-/* line 69, ../../sass/layouts/responsive-sidebars.scss */
-#header,
-#highlighted,
-#main,
-#footer,
-#footer-left-right {
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  clear: right;
-}
-
 /*
  * Containers for grid items and flow items.
  */
@@ -80,7 +63,7 @@
   clear: both;
 }
 
-/* line 91, ../../sass/layouts/responsive-sidebars.scss */
+/* line 90, ../../sass/layouts/responsive-sidebars.scss */
 .with-grid-background #header,
 .with-grid-background #highlighted,
 .with-grid-background #main,
@@ -97,88 +80,207 @@
   /*
    * Use 12 grid columns for larger screens.
    */
-  /* line 102, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 101, ../../sass/layouts/responsive-sidebars.scss */
+  #logo {
+    float: right;
+    width: 8.33333%;
+    margin-right: 0%;
+    margin-left: -8.33333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 105, ../../sass/layouts/responsive-sidebars.scss */
+  #name-and-slogan {
+    margin-top: 14px;
+  }
+  /* line 107, ../../sass/layouts/responsive-sidebars.scss */
+  #name-and-slogan h1 {
+    float: right;
+    width: 41.66667%;
+    margin-right: 8.33333%;
+    margin-left: -50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 110, ../../sass/layouts/responsive-sidebars.scss */
+  #name-and-slogan h2 {
+    float: right;
+    width: 33.33333%;
+    margin-right: 41.66667%;
+    margin-left: -75%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-top: 14px;
+  }
+
+  /* line 117, ../../sass/layouts/responsive-sidebars.scss */
   .region-header {
     float: left;
     width: 25%;
     margin-left: 0%;
     margin-right: -25%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
 
-  /* line 106, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 121, ../../sass/layouts/responsive-sidebars.scss */
   #navigation {
     clear: both;
     float: right;
     width: 91.66667%;
     margin-right: 8.33333%;
     margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
 
-  /* line 111, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 126, ../../sass/layouts/responsive-sidebars.scss */
   .region-highlighted {
     float: right;
     width: 83.33333%;
     margin-right: 8.33333%;
     margin-left: -91.66667%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
 
-  /* line 115, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 130, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-left {
     clear: right;
     float: right;
     width: 50%;
     margin-right: 0%;
     margin-left: -50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 119, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 134, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-left .block {
     clear: right;
     float: right;
     width: 100%;
     margin-right: 0%;
     margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 124, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 139, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-left .views-row-1, #footer-left-right .region-footer-left .views-row-4 {
     clear: right;
     float: right;
     width: 33.33333%;
     margin-right: 0%;
     margin-left: -33.33333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 128, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 143, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-left .views-row-2, #footer-left-right .region-footer-left .views-row-5 {
     float: right;
     width: 33.33333%;
     margin-right: 33.33333%;
     margin-left: -66.66667%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 131, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 146, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-left .views-row-3, #footer-left-right .region-footer-left .views-row-6 {
     clear: left;
     float: right;
     width: 33.33333%;
     margin-right: 66.66667%;
     margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
 
-  /* line 137, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 152, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right {
     clear: left;
     float: left;
     width: 50%;
     margin-left: 0%;
     margin-right: -50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 141, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 156, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right .block {
     clear: right;
     float: right;
     width: 100%;
     margin-right: 0%;
     margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 146, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 161, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right .panel-pane {
     float: right;
     padding-left: 10px;
@@ -194,69 +296,48 @@
     margin-left: -13.33333px;
   }
 
-  /* line 153, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 168, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-1, #content .views-row-4 {
     clear: right;
     float: right;
     width: 33.33333%;
     margin-right: 0%;
     margin-left: -33.33333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 157, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 172, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-2, #content .views-row-5 {
     float: right;
     width: 33.33333%;
     margin-right: 33.33333%;
     margin-left: -66.66667%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
-  /* line 160, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 175, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-3, #content .views-row-6 {
     clear: left;
     float: right;
     width: 33.33333%;
     margin-right: 66.66667%;
     margin-left: -100%;
-  }
-
-  /* line 166, ../../sass/layouts/responsive-sidebars.scss */
-  #logo {
-    float: right;
-    width: 8.33333%;
-    margin-right: 0%;
-    margin-left: -8.33333%;
-  }
-
-  /* line 170, ../../sass/layouts/responsive-sidebars.scss */
-  #name-and-slogan {
-    float: right;
-    width: 66.66667%;
-    margin-right: 8.33333%;
-    margin-left: -75%;
-    position: relative;
-  }
-  /* line 46, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-  #name-and-slogan:before, #name-and-slogan:after {
-    content: "";
-    display: table;
-  }
-  /* line 50, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-  #name-and-slogan:after {
-    clear: both;
-  }
-  /* line 176, ../../sass/layouts/responsive-sidebars.scss */
-  #name-and-slogan h1 {
-    float: right;
-    width: 50%;
-    margin-right: 0%;
-    margin-left: -50%;
-  }
-  /* line 179, ../../sass/layouts/responsive-sidebars.scss */
-  #name-and-slogan h2 {
-    position: absolute;
-    bottom: 0;
-    float: right;
-    width: 50%;
-    margin-right: 50%;
-    margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
 }
