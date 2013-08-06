@@ -151,6 +151,9 @@ body {
 }
 
 .region-highlighted {
+  .block:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 .breadcrumb { /* The path to the current page in the form of a list of links */
