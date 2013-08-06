@@ -130,8 +130,9 @@ $zen-auto-include-flow-item-base: true;
   #footer-left-right .region-footer-left {
     @include zen-clear(left);
     @include zen-grid-item(6, 1);
+    @include zen-nested-container;
 
-    .block {
+    .block-block {
       @include zen-clear();
       @include zen-grid-item(12, 1);
     }
@@ -152,8 +153,9 @@ $zen-auto-include-flow-item-base: true;
   #footer-left-right .region-footer-right {
     @include zen-clear(right);
     @include zen-grid-item(6, 1, right);
+    @include zen-nested-container;
 
-    .block {
+    .block-block {
       @include zen-clear();
       @include zen-grid-item(12, 1);
     }
