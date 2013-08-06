@@ -206,7 +206,7 @@
     word-wrap: break-word;
   }
   /* line 139, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-left .views-row-1, #footer-left-right .region-footer-left .views-row-4 {
+  #footer-left-right .region-footer-left .views-row-1, #footer-left-right .region-footer-left .views-row-4, #footer-left-right .region-footer-left .views-row-7 {
     clear: right;
     float: right;
     width: 33.33333%;
@@ -221,7 +221,7 @@
     word-wrap: break-word;
   }
   /* line 143, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-left .views-row-2, #footer-left-right .region-footer-left .views-row-5 {
+  #footer-left-right .region-footer-left .views-row-2, #footer-left-right .region-footer-left .views-row-5, #footer-left-right .region-footer-left .views-row-8 {
     float: right;
     width: 33.33333%;
     margin-right: 33.33333%;
@@ -235,7 +235,7 @@
     word-wrap: break-word;
   }
   /* line 146, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-left .views-row-3, #footer-left-right .region-footer-left .views-row-6 {
+  #footer-left-right .region-footer-left .views-row-3, #footer-left-right .region-footer-left .views-row-6, #footer-left-right .region-footer-left .views-row-9 {
     clear: left;
     float: right;
     width: 33.33333%;

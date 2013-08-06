@@ -136,14 +136,14 @@ $zen-auto-include-flow-item-base: true;
       @include zen-grid-item(12, 1);
     }
 
-    .views-row-1, .views-row-4 {
+    .views-row-1, .views-row-4, .views-row-7 {
       @include zen-clear(left);
       @include zen-grid-item(4, 1);
     }
-    .views-row-2, .views-row-5 {
+    .views-row-2, .views-row-5, .views-row-8 {
       @include zen-grid-item(4, 5);
     }
-    .views-row-3, .views-row-6 {
+    .views-row-3, .views-row-6, .views-row-9 {
       @include zen-clear(right);
       @include zen-grid-item(4, 9);
     }
