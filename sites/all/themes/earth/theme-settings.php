@@ -29,5 +29,12 @@ function earth_form_system_theme_settings_alter(&$form, &$form_state, $form_id =
   unset($form['themedev']['zen_wireframes']); // We don't need to toggle wireframes on this site.
   // */
 
+  $form['themedev']['earth_grid_background'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Add grid background'),
+    '#default_value' => theme_get_setting('earth_grid_background'),
+    '#description'   => t('A grid background visualizes your grids and gutters.'),
+  );
+
   // We are editing the $form in place, so we don't need to return anything.
 }
