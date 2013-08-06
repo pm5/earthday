@@ -163,4 +163,24 @@ $zen-auto-include-item-base: false;
     }
   }
 
+  #logo {
+    @include zen-grid-item(1, 1);
+  }
+
+  #name-and-slogan {
+    @include zen-grid-item(8, 2);
+    $zen-column-count: 8;
+    @include zen-grid-container();
+    position: relative;
+
+    h1 {
+      @include zen-grid-item(4, 1);
+    }
+    h2 {
+      position: absolute;
+      bottom: 0;
+      @include zen-grid-item(4, 5);
+    }
+  }
+
 }

@@ -9,6 +9,20 @@
 
 @import "base";
 
+$color-main:            #66bab7;
+$color-main-lighter:    #92ddda;
+$color-main-lightest:   #a6ddda;
+$color-main-darker:     #5c8b8a;
+$color-main-darkest:    #217976;
+$color-main-text:       #fcfcfc;
+
+$header-background:     #66bab7;
+$header-text:           #fbfbfb;
+$main-background:       #a6ddda;
+$main-text:             #000000;
+$main-block-background: #fcfcfc;
+$footer-background:     #5c8b8a;
+$footer-text:           #f0f0f0;
 
 /*
  * Body
@@ -48,11 +62,60 @@ body {
 #header {
 }
 
-#logo { /* Wrapping link for logo */
-  float: left; /* LTR */
-  margin: 0;
-  padding: 0;
+#header-wrapper {
+  background-color: $header-background;
+  color: $header-text;
 
+  a:link,
+  a:visited {
+    color: $header-text;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+#main-wrapper {
+  background-color: $main-background;
+  color: $main-text;
+
+  a:link,
+  a:visited {
+    color: $main-text;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  .views-row {
+    background-color: $main-block-background;
+  }
+
+}
+
+#footer-wrapper {
+  background-color: $footer-background;
+  color: $footer-text;
+
+  a:link,
+  a:visited {
+    color: $footer-text;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+#logo { /* Wrapping link for logo */
   img {
     vertical-align: bottom;
   }
@@ -65,17 +128,6 @@ body {
 #site-name { /* The name of the website */
   margin: 0;
   font-size: 1em;
-
-  a:link,
-  a:visited {
-    color: #000;
-    text-decoration: none;
-  }
-
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-  }
 }
 
 #site-slogan { /* The slogan (or tagline) of a website */
