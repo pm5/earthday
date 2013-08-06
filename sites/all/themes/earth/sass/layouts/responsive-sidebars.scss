@@ -160,7 +160,17 @@ $zen-auto-include-flow-item-base: true;
       @include zen-grid-item(12, 1);
     }
 
+    .panel-panel {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+    }
+
     .panel-pane {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12)
+    }
+
+    .panel-pane:nth-child(6n+5) {
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12, false, false)
     }
