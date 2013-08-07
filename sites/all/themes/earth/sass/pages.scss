@@ -182,10 +182,16 @@ body {
   }
 }
 
-h1.title, /* The title of the page */
+h1.title { /* The title of the page */
+  margin: 0.23em 0;
+}
+
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
 h2.block-title, /* Block title */
-h2.pane-title, /* Pane title */
+h2.pane-title { /* Pane title */
+  margin: 0.07em 0;
+}
+
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
@@ -294,6 +300,11 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
+}
+
+#footer-left-right {
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 /*

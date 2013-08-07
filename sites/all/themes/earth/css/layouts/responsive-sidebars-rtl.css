@@ -316,41 +316,11 @@
     margin-left: -13.33333px;
   }
 
-  /* line 177, ../../sass/layouts/responsive-sidebars.scss */
-  #content .views-row-1, #content .views-row-4 {
-    clear: right;
+  /* line 176, ../../sass/layouts/responsive-sidebars.scss */
+  #content {
     float: right;
-    width: 33.33333%;
+    width: 100%;
     margin-right: 0%;
-    margin-left: -33.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  /* line 181, ../../sass/layouts/responsive-sidebars.scss */
-  #content .views-row-2, #content .views-row-5 {
-    float: right;
-    width: 33.33333%;
-    margin-right: 33.33333%;
-    margin-left: -66.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  /* line 184, ../../sass/layouts/responsive-sidebars.scss */
-  #content .views-row-3, #content .views-row-6 {
-    clear: left;
-    float: right;
-    width: 33.33333%;
-    margin-right: 66.66667%;
     margin-left: -100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -359,5 +329,35 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
+  }
+  /* line 179, ../../sass/layouts/responsive-sidebars.scss */
+  #content .views-row {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    width: 33.33333%;
+    padding-right: 0;
+    padding-left: 13.33333px;
+    margin-left: 6.66667px;
+  }
+  /* line 184, ../../sass/layouts/responsive-sidebars.scss */
+  #content .views-row:nth-child(3n) {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    width: 33.33333%;
+    padding-right: 0;
+    padding-left: 13.33333px;
+    margin-left: -13.33333px;
   }
 }

@@ -174,17 +174,18 @@ $zen-auto-include-flow-item-base: true;
   }
 
   #content {
-    .views-row-1, .views-row-4 {
-      @include zen-clear(left);
-      @include zen-grid-item(4, 1);
+    @include zen-grid-item(12, 1);
+
+    .views-row {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12);
     }
-    .views-row-2, .views-row-5 {
-      @include zen-grid-item(4, 5);
+
+    .views-row:nth-child(3n) {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12, false, false);
     }
-    .views-row-3, .views-row-6 {
-      @include zen-clear(right);
-      @include zen-grid-item(4, 9);
-    }
+
   }
 
 }
