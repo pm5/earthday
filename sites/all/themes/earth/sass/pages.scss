@@ -92,11 +92,6 @@ body {
   a:focus {
     text-decoration: underline;
   }
-
-  .views-row {
-    background-color: $main-block-background;
-  }
-
 }
 
 #footer-wrapper {
@@ -153,6 +148,19 @@ body {
  */
 
 #content {
+  .views-field {
+    background-color: $main-block-background;
+
+    h3, p {
+      margin: 0;
+    }
+    h3 {
+      padding: 0.4em 30px;
+    }
+    p {
+      padding: 0.2em 30px;
+    }
+  }
 }
 
 .region-highlighted {
