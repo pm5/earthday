@@ -188,4 +188,23 @@ $zen-auto-include-flow-item-base: true;
 
   }
 
+  body.page-node {
+
+    #content {
+      @include zen-nested-container;
+
+      .panel-col-first {
+        @include zen-grid-item(9, 1);
+      }
+    
+      .panel-col-last {
+        @include zen-grid-item(3, 10);
+
+        .views-row {
+          @include zen-grid-flow-item(12, 12, false, false);
+        }
+      }
+    }
+  }
+
 }
