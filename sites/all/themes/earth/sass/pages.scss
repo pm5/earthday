@@ -15,11 +15,11 @@ $color-main-lightest:   #a6ddda;
 $color-main-darker:     #5c8b8a;
 $color-main-darkest:    #217976;
 $color-main-text:       #fcfcfc;
-$color-reverse:         #ffb11b;
 
 $header-background:     #66bab7;
 $header-text:           #fafafa;
 $highlighted-background:#fcfcfc;
+$main-ruler:            #ffb11b;
 $main-background:       #f0f8f5;
 $main-text:             #000000;
 $main-block-background: #fcfcfc;
@@ -89,6 +89,7 @@ body {
 #main-wrapper {
   background-color: $main-background;
   color: $main-text;
+  border-top: solid 5px $main-ruler;
 
   a:link,
   a:visited {
