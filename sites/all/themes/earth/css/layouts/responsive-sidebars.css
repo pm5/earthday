@@ -189,7 +189,7 @@
     padding-right: 0;
   }
   /* line 135, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-left .block-block {
+  #footer-left-right .region-footer-left .block-block, #footer-left-right .region-footer-left .block-views {
     clear: left;
     float: left;
     width: 100%;
@@ -204,12 +204,8 @@
     word-wrap: break-word;
   }
   /* line 140, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-left .views-row-1, #footer-left-right .region-footer-left .views-row-4, #footer-left-right .region-footer-left .views-row-7 {
-    clear: left;
+  #footer-left-right .region-footer-left .views-row {
     float: left;
-    width: 33.33333%;
-    margin-left: 0%;
-    margin-right: -33.33333%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -217,13 +213,14 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
+    width: 33.33333%;
+    padding-left: 0;
+    padding-right: 13.33333px;
+    margin-right: 6.66667px;
   }
   /* line 144, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-left .views-row-2, #footer-left-right .region-footer-left .views-row-5, #footer-left-right .region-footer-left .views-row-8 {
+  #footer-left-right .region-footer-left .views-row:nth-child(3n) {
     float: left;
-    width: 33.33333%;
-    margin-left: 33.33333%;
-    margin-right: -66.66667%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -231,24 +228,13 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
-  }
-  /* line 147, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-left .views-row-3, #footer-left-right .region-footer-left .views-row-6, #footer-left-right .region-footer-left .views-row-9 {
-    clear: right;
-    float: left;
     width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
+    padding-left: 0;
+    padding-right: 13.33333px;
+    margin-right: -13.33333px;
   }
 
-  /* line 153, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 150, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right {
     clear: right;
     float: right;
@@ -265,8 +251,8 @@
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 158, ../../sass/layouts/responsive-sidebars.scss */
-  #footer-left-right .region-footer-right .block-block {
+  /* line 155, ../../sass/layouts/responsive-sidebars.scss */
+  #footer-left-right .region-footer-right .block-block, #footer-left-right .region-footer-right .block-views {
     clear: left;
     float: left;
     width: 100%;
@@ -280,7 +266,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 163, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 160, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right .panel-panel {
     clear: left;
     float: left;
@@ -295,7 +281,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 168, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 165, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right .panel-pane {
     float: left;
     padding-left: 10px;
@@ -310,7 +296,7 @@
     padding-right: 13.33333px;
     margin-right: 6.66667px;
   }
-  /* line 173, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 170, ../../sass/layouts/responsive-sidebars.scss */
   #footer-left-right .region-footer-right .panel-pane:nth-child(6n+5) {
     float: left;
     padding-left: 10px;
@@ -326,7 +312,7 @@
     margin-right: -13.33333px;
   }
 
-  /* line 180, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 177, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-1, #content .views-row-4 {
     clear: left;
     float: left;
@@ -341,7 +327,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 184, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 181, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-2, #content .views-row-5 {
     float: left;
     width: 33.33333%;
@@ -355,7 +341,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 187, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 184, ../../sass/layouts/responsive-sidebars.scss */
   #content .views-row-3, #content .views-row-6 {
     clear: right;
     float: left;

@@ -132,21 +132,18 @@ $zen-auto-include-flow-item-base: true;
     @include zen-grid-item(6, 1);
     @include zen-nested-container;
 
-    .block-block {
+    .block-block, .block-views {
       @include zen-clear();
       @include zen-grid-item(12, 1);
     }
 
-    .views-row-1, .views-row-4, .views-row-7 {
-      @include zen-clear(left);
-      @include zen-grid-item(4, 1);
+    .views-row {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12)
     }
-    .views-row-2, .views-row-5, .views-row-8 {
-      @include zen-grid-item(4, 5);
-    }
-    .views-row-3, .views-row-6, .views-row-9 {
-      @include zen-clear(right);
-      @include zen-grid-item(4, 9);
+    .views-row:nth-child(3n) {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12, false, false)
     }
   }
 
@@ -155,7 +152,7 @@ $zen-auto-include-flow-item-base: true;
     @include zen-grid-item(6, 1, right);
     @include zen-nested-container;
 
-    .block-block {
+    .block-block, .block-views {
       @include zen-clear();
       @include zen-grid-item(12, 1);
     }
