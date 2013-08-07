@@ -18,12 +18,13 @@ $color-main-text:       #fcfcfc;
 $color-reverse:         #ffb11b;
 
 $header-background:     #66bab7;
-$header-text:           #fbfbfb;
+$header-text:           #fafafa;
+$highlighted-background:#fcfcfc;
 $main-background:       #f0f8f5;
 $main-text:             #000000;
 $main-block-background: #fcfcfc;
 $footer-background:     #66bab7;
-$footer-text:           #fbfbfb;
+$footer-text:           #fafafa;
 
 
 /*
@@ -78,6 +79,11 @@ body {
   a:focus {
     text-decoration: underline;
   }
+}
+
+#highlighted-wrapper,
+#highlighted {
+  background-color: $highlighted-background;
 }
 
 #main-wrapper {
@@ -180,6 +186,8 @@ body {
 }
 
 .region-highlighted {
+  background: #ffffff;
+
   .block:last-child {
     margin-bottom: 0px;
   }
