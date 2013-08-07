@@ -141,6 +141,7 @@ body {
  */
 
 #main {
+  padding: 7px 0;
 }
 
 /*
@@ -183,7 +184,7 @@ body {
 }
 
 h1.title { /* The title of the page */
-  margin: 0.33em 0;
+  margin: 0.23em 0;
 }
 
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
@@ -303,8 +304,7 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #footer-left-right {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding: 7px 0;
 }
 
 /*
