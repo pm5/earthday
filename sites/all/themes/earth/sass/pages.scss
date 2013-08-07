@@ -15,14 +15,16 @@ $color-main-lightest:   #a6ddda;
 $color-main-darker:     #5c8b8a;
 $color-main-darkest:    #217976;
 $color-main-text:       #fcfcfc;
+$color-reverse:         #ffb11b;
 
 $header-background:     #66bab7;
 $header-text:           #fbfbfb;
-$main-background:       #a6ddda;
+$main-background:       #f0f8f5;
 $main-text:             #000000;
 $main-block-background: #fcfcfc;
-$footer-background:     #5c8b8a;
-$footer-text:           #f0f0f0;
+$footer-background:     #66bab7;
+$footer-text:           #fbfbfb;
+
 
 /*
  * Body
@@ -151,6 +153,8 @@ body {
 #content {
   .views-field {
     background-color: $main-block-background;
+    border-left: solid #eee 1px;
+    border-right: solid #eee 1px;
 
     h3, p {
       margin: 0;
@@ -162,6 +166,17 @@ body {
       padding: 0.2em 30px;
     }
   }
+  .views-field:first-child {
+    border-top: solid #eee 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .views-field:last-child {
+    border-bottom: solid #eee 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
 }
 
 .region-highlighted {
