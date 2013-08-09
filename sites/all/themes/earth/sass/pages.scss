@@ -203,6 +203,10 @@ body.page-node {
   .block:last-child {
     margin-bottom: 0px;
   }
+
+  .flexslider {
+    margin: 0;
+  }
 }
 
 .breadcrumb { /* The path to the current page in the form of a list of links */
@@ -220,7 +224,6 @@ body.page-node {
 
 h1.title { /* The title of the page */
   margin: 0.23em 0;
-  text-align: center;
 }
 
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
