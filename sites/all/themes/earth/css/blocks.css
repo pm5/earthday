@@ -162,3 +162,8 @@
 #block-user-online {
   /* "Who's online" block for a list of the online users */
 }
+
+/* line 111, ../sass/blocks.scss */
+div.view-display-id-earthday_partner_block .views-row {
+  margin-bottom: 0.33em;
+}
