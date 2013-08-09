@@ -119,7 +119,7 @@ $zen-auto-include-flow-item-base: true;
   }
 
   #navigation {
-    @include zen-clear(both);
+    @include zen-clear(right);
     @include zen-grid-item(11, 2);
   }
 

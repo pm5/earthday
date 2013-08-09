@@ -142,7 +142,7 @@
 
   /* line 121, ../../sass/layouts/responsive-sidebars.scss */
   #navigation {
-    clear: both;
+    clear: right;
     float: left;
     width: 91.66667%;
     margin-left: 8.33333%;

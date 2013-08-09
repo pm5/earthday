@@ -123,8 +123,10 @@ body {
 #logo { /* Wrapping link for logo */
   img {
     vertical-align: bottom;
-    width: 60px;
+    width: 86px;
     margin-top: 10px;
+    position: relative;
+    left: -20px;
   }
 }
 
