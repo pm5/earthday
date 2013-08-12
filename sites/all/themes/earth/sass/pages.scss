@@ -162,6 +162,12 @@ body {
  */
 
 #content {
+
+  .views-row, .flexslider {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
   .views-field {
     background-color: $main-block-background;
     border-left: solid $thin-line 1px;
@@ -177,11 +183,29 @@ body {
       padding: 0.2em 30px;
     }
   }
+
+  .views-field-field-image {
+    img {
+      display: block;
+    }
+  }
+
+  .views-field-title {
+    overflow-y: hidden;
+    height: 2em;
+  }
+
+  .views-field-body {
+    overflow-y: hidden;
+    height: 112px;
+  }
+
   .views-field:first-child, .views-field:first-child img {
     border-top: solid $thin-line 1px;
     border-top-left-radius: $thin-line-radius;
     border-top-right-radius: $thin-line-radius;
   }
+
   .views-field:last-child {
     border-bottom: solid $thin-line 1px;
     border-bottom-left-radius: $thin-line-radius;
@@ -214,6 +238,7 @@ body.page-node {
   border-radius: 0;
   border: 0;
   background: none;
+  box-shadow: none;
 }
 
 .breadcrumb { /* The path to the current page in the form of a list of links */

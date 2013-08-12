@@ -362,10 +362,8 @@
   }
   /* line 189, ../../sass/layouts/responsive-sidebars.scss */
   #content .view-display-id-earthday_article_promoted_pane .views-row {
+    clear: right;
     float: right;
-    width: 33.33333%;
-    margin-right: 0%;
-    margin-left: -33.33333%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -373,13 +371,14 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
+    width: 33.33333%;
+    padding-right: 0;
+    padding-left: 13.33333px;
+    margin-left: 6.66667px;
   }
-  /* line 193, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 195, ../../sass/layouts/responsive-sidebars.scss */
   #content .view-display-id-earthday_join_pane .flexslider {
     float: right;
-    width: 33.33333%;
-    margin-right: 33.33333%;
-    margin-left: -66.66667%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -387,13 +386,14 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
+    width: 33.33333%;
+    padding-right: 0;
+    padding-left: 13.33333px;
+    margin-left: 6.66667px;
   }
-  /* line 197, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 200, ../../sass/layouts/responsive-sidebars.scss */
   #content .view-display-id-earthday_shop_pane .flexslider {
     float: right;
-    width: 33.33333%;
-    margin-right: 66.66667%;
-    margin-left: -100%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -401,14 +401,18 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
+    width: 33.33333%;
+    padding-right: 0;
+    padding-left: 13.33333px;
+    margin-left: -13.33333px;
   }
 
-  /* line 204, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 208, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content {
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 207, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 211, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-first {
     float: right;
     width: 75%;
@@ -422,7 +426,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 211, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 215, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-last {
     float: right;
     width: 25%;
@@ -436,7 +440,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 214, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 218, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-last .views-row {
     padding-left: 10px;
     padding-right: 10px;
