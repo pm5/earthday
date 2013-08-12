@@ -186,6 +186,17 @@ $zen-auto-include-flow-item-base: true;
       @include zen-grid-flow-item(4, 12, false, false);
     }
 
+    .view-display-id-earthday_article_promoted_pane .views-row {
+      @include zen-grid-item(4, 1);
+    }
+
+    .view-display-id-earthday_join_pane .flexslider {
+      @include zen-grid-item(4, 5);
+    }
+
+    .view-display-id-earthday_shop_pane .flexslider {
+      @include zen-grid-item(4, 9);
+    }
   }
 
   body.page-node {

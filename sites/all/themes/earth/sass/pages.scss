@@ -207,11 +207,13 @@ body.page-node {
     margin-bottom: 0px;
   }
 
-  .flexslider {
-    margin: 0;
-    border-radius: 0;
-    border: 0;
-  }
+}
+
+.flexslider {
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  background: none;
 }
 
 .breadcrumb { /* The path to the current page in the form of a list of links */
