@@ -19,6 +19,8 @@ $color-main-text:       #fcfcfc;
 $header-background:     #66bab7;
 $header-text:           #fafafa;
 $highlighted-background:#fcfcfc;
+$menu-hover:            #5f9f9e;
+$menu-active:           #5c8b8a;
 $main-ruler:            #ffb11b;
 $main-background:       #f0f8f5;
 $main-text:             #000000;
@@ -155,6 +157,30 @@ body {
 
 #main {
   padding: 7px 0;
+}
+
+#navigation {
+  padding: 0 0 3px 0;
+
+  #main-menu {
+    li {
+      border-radius: 14px;
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
+    li:hover {
+      background: $menu-hover;
+    }
+
+    li.active-trail {
+      background: $menu-active;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 /*
