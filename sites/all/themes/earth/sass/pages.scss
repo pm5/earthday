@@ -212,6 +212,14 @@ body {
     border-bottom-right-radius: $thin-line-radius;
   }
 
+  .flex-direction-nav a {
+    top: 35%;
+  }
+
+  .flex-control-nav {
+    bottom: 160px;
+  }
+
 }
 
 body.page-node {
