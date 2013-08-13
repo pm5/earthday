@@ -113,7 +113,6 @@ $zen-auto-include-flow-item-base: true;
     }
   }
 
-
   .region-header {
     @include zen-grid-item(3, 1, right);
   }
@@ -200,6 +199,12 @@ $zen-auto-include-flow-item-base: true;
     .view-display-id-earthday_shop_pane .view-content {
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12, false, false);
+    }
+  }
+
+  #highlighted {
+    .flex-control-nav {
+      bottom: 5px;
     }
   }
 
