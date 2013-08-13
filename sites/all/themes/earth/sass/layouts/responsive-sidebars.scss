@@ -192,12 +192,12 @@ $zen-auto-include-flow-item-base: true;
       @include zen-grid-flow-item(4, 12);
     }
 
-    .view-display-id-earthday_join_pane .flexslider {
+    .view-display-id-earthday_join_pane .view-content {
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12);
     }
 
-    .view-display-id-earthday_shop_pane .flexslider {
+    .view-display-id-earthday_shop_pane .view-content {
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12, false, false);
     }

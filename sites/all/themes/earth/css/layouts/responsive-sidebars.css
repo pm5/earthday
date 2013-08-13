@@ -373,7 +373,7 @@
     margin-right: 6.66667px;
   }
   /* line 195, ../../sass/layouts/responsive-sidebars.scss */
-  #content .view-display-id-earthday_join_pane .flexslider {
+  #content .view-display-id-earthday_join_pane .view-content {
     float: left;
     padding-left: 10px;
     padding-right: 10px;
@@ -388,7 +388,7 @@
     margin-right: 6.66667px;
   }
   /* line 200, ../../sass/layouts/responsive-sidebars.scss */
-  #content .view-display-id-earthday_shop_pane .flexslider {
+  #content .view-display-id-earthday_shop_pane .view-content {
     float: left;
     padding-left: 10px;
     padding-right: 10px;
