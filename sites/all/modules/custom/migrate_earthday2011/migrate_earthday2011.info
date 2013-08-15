@@ -1,0 +1,13 @@
+name = "Migration from Earthday Taiwan 2011 site"
+description = "Migration from Earthday Taiwan 2011 site in Drupal 6.x"
+package = "Migration"
+core = 7.x
+
+dependencies[] = migrate (>7.x-2.5)
+dependencies[] = migrate_d2d
+
+files[] = migrate_earthday2011.migrate.inc
+
+; Base classes
+files[] = node.inc
+
