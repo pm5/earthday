@@ -10,6 +10,8 @@ class EarthdayNewsMigration extends DrupalNode6Migration
             ->sourceMigration('earthday_files');
         $this->addFieldMapping('field_image:file_class')
             ->defaultValue('MigrateFileFid');
+        $this->addFieldMapping('field_category', null)
+            ->defaultValue('新聞');
     }
 }
 
