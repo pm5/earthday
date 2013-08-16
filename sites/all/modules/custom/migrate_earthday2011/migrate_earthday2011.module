@@ -17,7 +17,7 @@ function migrate_earthday2011_register_migrations() {
   $node_arguments = array(
     array(
       'class_name' => 'EarthdayNewsMigration',
-      'description' => t('Migrate earthday story of news drom Earthday 2011'),
+      'description' => t('Migrate earthday story of news from Earthday 2011'),
       'machine_name' => 'earthday_news',
       'source_type' => 'story',
       'destination_type' => 'earthday_news',
@@ -27,4 +27,11 @@ function migrate_earthday2011_register_migrations() {
     $arguments = array_merge_recursive($arguments, $common_arguments);
     Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
   }
+
+  $file_arguments = $common_arguments + array(
+    'description' => t('Migration of files from Earthday 2011'),
+    'machine_name' => 'earthday_files',
+    'source_dir' => '/var/www/drupal6/files/',
+  );
+  Migration::registerMigration('DrupalFile6Migration', $file_arguments['machine_name'], $file_arguments);
 }
