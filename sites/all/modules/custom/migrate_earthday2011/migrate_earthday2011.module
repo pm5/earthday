@@ -1,3 +1,30 @@
 <?php
 
-define("SOURCE_DATABASE", 'drupal_dev');
+/**
+ * Implements hook_flush_caches().
+ */
+function migrate_earthday2011_flush_caches() {
+  migrate_earthday2011_register_migrations();
+}
+
+function migrate_earthday2011_register_migrations() {
+  $common_arguments = array(
+    'source_connection' => 'legacy',
+    'source_version' => 6,
+    'group_name' => 'earthday',
+  );
+
+  $node_arguments = array(
+    array(
+      'class_name' => 'EarthdayNewsMigration',
+      'description' => t('Migrate earthday story of news drom Earthday 2011'),
+      'machine_name' => 'earthday_news',
+      'source_type' => 'story',
+      'destination_type' => 'earthday_news',
+    ),
+  );
+  foreach ($node_arguments as $arguments) {
+    $arguments = array_merge_recursive($arguments, $common_arguments);
+    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
+  }
+}
