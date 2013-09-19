@@ -361,8 +361,7 @@
     margin-left: -13.33333px;
   }
   /* line 188, ../../sass/layouts/responsive-sidebars.scss */
-  #content .view-display-id-earthday_article_promoted_pane .views-row {
-    clear: right;
+  #content .pane-earthday-join-pane .view-content {
     float: right;
     padding-left: 10px;
     padding-right: 10px;
@@ -376,23 +375,8 @@
     padding-left: 13.33333px;
     margin-left: 6.66667px;
   }
-  /* line 194, ../../sass/layouts/responsive-sidebars.scss */
-  #content .view-display-id-earthday_join_pane .view-content {
-    float: right;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    width: 33.33333%;
-    padding-right: 0;
-    padding-left: 13.33333px;
-    margin-left: 6.66667px;
-  }
-  /* line 199, ../../sass/layouts/responsive-sidebars.scss */
-  #content .view-display-id-earthday_shop_pane .view-content {
+  /* line 193, ../../sass/layouts/responsive-sidebars.scss */
+  #content .pane-earthday-shop-pane .view-content {
     float: right;
     padding-left: 10px;
     padding-right: 10px;
@@ -407,17 +391,17 @@
     margin-left: -13.33333px;
   }
 
-  /* line 206, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 200, ../../sass/layouts/responsive-sidebars.scss */
   #highlighted .flex-control-nav {
     bottom: 5px;
   }
 
-  /* line 213, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 207, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content {
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 216, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 210, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-first {
     float: right;
     width: 75%;
@@ -431,7 +415,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 220, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 214, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-last {
     float: right;
     width: 25%;
@@ -445,7 +429,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 223, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 217, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-last .views-row {
     padding-left: 10px;
     padding-right: 10px;

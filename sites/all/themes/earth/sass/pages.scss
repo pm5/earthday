@@ -19,8 +19,11 @@ $color-main-text:       #fcfcfc;
 $header-background:     #66bab7;
 $header-text:           #fafafa;
 $highlighted-background:#fcfcfc;
-$menu-hover:            #5f9f9e;
-$menu-active:           #5c8b8a;
+$main-menu-hover:       #5f9f9e;
+$main-menu-active:      #5c8b8a;
+$menu-tab-background:   #e9e9e9;
+$menu-tab-hover:        #a6ddda;
+$menu-tab-active:       #d3d3d3;
 $main-ruler:            #ffb11b;
 $main-background:       #f0f8f5;
 $main-text:             #000000;
@@ -170,17 +173,41 @@ body {
     }
 
     li:hover {
-      background: $menu-hover;
+      background: $main-menu-hover;
     }
 
     li.active-trail {
-      background: $menu-active;
+      background: $main-menu-active;
     }
 
     a:hover {
       text-decoration: none;
     }
   }
+}
+
+#menu-tab {
+  text-align: center;
+
+  li {
+    list-style: none outside none;
+    display: inline;
+    border-radius: 0.8em;
+    padding: 0.2em 0.8em;
+    background: $menu-tab-background;
+  }
+
+  li:hover {
+    background: $menu-tab-hover;
+  }
+
+  li.active-trail {
+    background: $menu-tab-active;
+  }
+
+  a:hover {
+      text-decoration: none;
+    }
 }
 
 /*

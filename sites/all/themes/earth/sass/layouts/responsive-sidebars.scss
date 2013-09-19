@@ -185,18 +185,12 @@ $zen-auto-include-flow-item-base: true;
       @include zen-grid-flow-item(4, 12, false, false);
     }
 
-    .view-display-id-earthday_article_promoted_pane .views-row {
-      @include zen-clear(left);
+    .pane-earthday-join-pane .view-content {
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12);
     }
 
-    .view-display-id-earthday_join_pane .view-content {
-      @include zen-float(left);
-      @include zen-grid-flow-item(4, 12);
-    }
-
-    .view-display-id-earthday_shop_pane .view-content {
+    .pane-earthday-shop-pane .view-content {
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12, false, false);
     }

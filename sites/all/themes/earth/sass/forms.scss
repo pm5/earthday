@@ -149,3 +149,23 @@ form {
 td.menu-disabled {
   background: #ccc;
 }
+
+/**
+ * Search block
+ */
+#search-block-form {
+  #edit-submit {
+    background-color: #ffb11b;
+    color: #fff;
+    border: 2px solid #ffb11b;
+    position: relative;
+    left: -0.4em;
+
+    /* XXX unnormalized Chrome CSS */
+    line-height: 1em;
+  }
+
+  .form-text {
+    border: 0;
+  }
+}

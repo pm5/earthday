@@ -16,11 +16,25 @@ function migrate_earthday2011_register_migrations() {
 
   $node_arguments = array(
     array(
-      'class_name' => 'EarthdayNewsMigration',
-      'description' => t('Migrate earthday story of news from Earthday 2011'),
+      'class_name' => 'EarthdayStoryMigration',
+      'description' => t('Migrate story in Earthday 2011 to news in earthday news.'),
       'machine_name' => 'earthday_news',
       'source_type' => 'story',
       'destination_type' => 'earthday_news',
+    ),
+    array(
+      'class_name' => 'EarthdayTopicsMigration',
+      'description' => t('Migrate topics in Earthday 2011 to columns in earthday news.'),
+      'machine_name' => 'earthday_topic',
+      'source_type' => 'topics',
+      'destination_type' => 'earthday_news',
+    ),
+    array(
+      'class_name' => 'EarthdayEventsMigration',
+      'description' => t('Migrate events in Earthday 2011 to earthday join.'),
+      'machine_name' => 'earthday_event',
+      'source_type' => 'events',
+      'destination_type' => 'earthday_join',
     ),
   );
   foreach ($node_arguments as $arguments) {
@@ -29,7 +43,7 @@ function migrate_earthday2011_register_migrations() {
   }
 
   $file_arguments = $common_arguments + array(
-    'description' => t('Migration of files from Earthday 2011'),
+    'description' => t('Migrate files in Earthday 2011'),
     'machine_name' => 'earthday_files',
     'source_dir' => '/var/www/drupal6/files/',
   );
