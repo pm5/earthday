@@ -27,7 +27,7 @@ function migrate_earthday2011_register_migrations() {
       'description' => t('Migrate topics in Earthday 2011 to columns in earthday news.'),
       'machine_name' => 'earthday_topic',
       'source_type' => 'topics', # 焦點專題
-      'destination_type' => 'earthday_news',
+      'destination_type' => 'earthday_column',
     ),
     array(
       'class_name' => 'EarthdayEventsMigration',
