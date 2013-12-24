@@ -19,21 +19,21 @@ function migrate_earthday2011_register_migrations() {
       'class_name' => 'EarthdayStoryMigration',
       'description' => t('Migrate story in Earthday 2011 to news in earthday news.'),
       'machine_name' => 'earthday_news',
-      'source_type' => 'story',
+      'source_type' => 'story', # 新聞室
       'destination_type' => 'earthday_news',
     ),
     array(
       'class_name' => 'EarthdayTopicsMigration',
       'description' => t('Migrate topics in Earthday 2011 to columns in earthday news.'),
       'machine_name' => 'earthday_topic',
-      'source_type' => 'topics',
+      'source_type' => 'topics', # 焦點專題
       'destination_type' => 'earthday_news',
     ),
     array(
       'class_name' => 'EarthdayEventsMigration',
       'description' => t('Migrate events in Earthday 2011 to earthday join.'),
       'machine_name' => 'earthday_event',
-      'source_type' => 'events',
+      'source_type' => 'events', # 活動登錄
       'destination_type' => 'earthday_join',
     ),
   );
