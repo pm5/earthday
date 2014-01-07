@@ -31,8 +31,16 @@ class EarthdayTopicsMigration extends DrupalNode6Migration
       ->sourceMigration('earthday_files');
     $this->addFieldMapping('field_image:file_class')
       ->defaultValue('MigrateFileFid');
-    $this->addFieldMapping('field_category')
-      ->defaultValue('專欄');
+    $this->addFieldMapping('field_column_type', 'name');
+  }
+
+  public function query()
+  {
+    $query = parent::query();
+    $query->innerJoin('term_node', 't', 't.nid = n.nid');
+    $query->innerJoin('term_data', 'td', 't.tid = td.tid');
+    $query->fields('td', array('name'));
+    return $query;
   }
 }
 
