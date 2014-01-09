@@ -184,16 +184,6 @@ $zen-auto-include-flow-item-base: true;
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12, false, false);
     }
-
-    .pane-earthday-join-pane .view-content {
-      @include zen-float(left);
-      @include zen-grid-flow-item(4, 12);
-    }
-
-    .pane-earthday-shop-pane .view-content {
-      @include zen-float(left);
-      @include zen-grid-flow-item(4, 12, false, false);
-    }
   }
 
   #highlighted {
@@ -210,7 +200,7 @@ $zen-auto-include-flow-item-base: true;
       .panel-col-first {
         @include zen-grid-item(9, 1);
       }
-    
+
       .panel-col-last {
         @include zen-grid-item(3, 10);
 
