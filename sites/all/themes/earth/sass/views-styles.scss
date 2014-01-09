@@ -5,6 +5,8 @@
 
 @import "base";
 
+$zen-column-count:  12;
+$zen-gutter-width:  20px;
 
 /*
  * Views' admin tabs
@@ -41,5 +43,20 @@
     &:last-child {
       @include border-radius(0 0 7px 7px);
     }
+  }
+}
+
+.view.grid-4-col {
+  .views-row-1 {
+    @include zen-grid-item(3, 1);
+  }
+  .views-row-2 {
+    @include zen-grid-item(3, 4);
+  }
+  .views-row-3 {
+    @include zen-grid-item(3, 7);
+  }
+  .views-row-4 {
+    @include zen-grid-item(3, 10);
   }
 }

@@ -10,18 +10,18 @@
  * pages. If your sub-theme isn't used for admin pages, you can remove this
  * entire section.
  */
-/* line 18, ../sass/views-styles.scss */
+/* line 20, ../sass/views-styles.scss */
 .views-displays .secondary li {
   float: none;
   margin: 0 6px 0;
 }
-/* line 24, ../sass/views-styles.scss */
+/* line 26, ../sass/views-styles.scss */
 .views-displays .secondary a:link,
 .views-displays .secondary a:visited {
   text-shadow: none;
   padding: 2px 7px 3px;
 }
-/* line 29, ../sass/views-styles.scss */
+/* line 31, ../sass/views-styles.scss */
 .views-displays .secondary .open > a {
   -webkit-border-radius: 7px 7px 0 0;
   -moz-border-radius: 7px 7px 0 0;
@@ -29,15 +29,15 @@
   -o-border-radius: 7px 7px 0 0;
   border-radius: 7px 7px 0 0;
 }
-/* line 31, ../sass/views-styles.scss */
+/* line 33, ../sass/views-styles.scss */
 .views-displays .secondary .open > a:hover {
   color: #333;
 }
-/* line 36, ../sass/views-styles.scss */
+/* line 38, ../sass/views-styles.scss */
 .views-displays .secondary .action-list li {
   margin: 0;
 }
-/* line 38, ../sass/views-styles.scss */
+/* line 40, ../sass/views-styles.scss */
 .views-displays .secondary .action-list li:first-child {
   -webkit-border-radius: 0 7px 0 0;
   -moz-border-radius: 0 7px 0 0;
@@ -45,11 +45,68 @@
   -o-border-radius: 0 7px 0 0;
   border-radius: 0 7px 0 0;
 }
-/* line 41, ../sass/views-styles.scss */
+/* line 43, ../sass/views-styles.scss */
 .views-displays .secondary .action-list li:last-child {
   -webkit-border-radius: 0 0 7px 7px;
   -moz-border-radius: 0 0 7px 7px;
   -ms-border-radius: 0 0 7px 7px;
   -o-border-radius: 0 0 7px 7px;
   border-radius: 0 0 7px 7px;
+}
+
+/* line 50, ../sass/views-styles.scss */
+.view.grid-4-col .views-row-1 {
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 53, ../sass/views-styles.scss */
+.view.grid-4-col .views-row-2 {
+  float: left;
+  width: 25%;
+  margin-left: 25%;
+  margin-right: -50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 56, ../sass/views-styles.scss */
+.view.grid-4-col .views-row-3 {
+  float: left;
+  width: 25%;
+  margin-left: 50%;
+  margin-right: -75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 59, ../sass/views-styles.scss */
+.view.grid-4-col .views-row-4 {
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }

@@ -33,7 +33,6 @@ $zen-gutter-width:  20px;
 $zen-auto-include-item-base: true;
 $zen-auto-include-flow-item-base: true;
 
-
 /*
  * Center the page.
  */
@@ -172,20 +171,6 @@ $zen-auto-include-flow-item-base: true;
     }
   }
 
-  #content {
-    @include zen-grid-item(12, 1);
-
-    .views-row {
-      @include zen-float(left);
-      @include zen-grid-flow-item(4, 12);
-    }
-
-    .views-row:nth-child(3n) {
-      @include zen-float(left);
-      @include zen-grid-flow-item(4, 12, false, false);
-    }
-  }
-
   #highlighted {
     .flex-control-nav {
       bottom: 5px;
@@ -211,4 +196,26 @@ $zen-auto-include-flow-item-base: true;
     }
   }
 
+  #content > .view.grid-3-col,  /* view pages */
+  body.grid-3-col #content .view { /* panel pages */
+    .views-row {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12);
+    }
+
+    .views-row:nth-child(3n) {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12, false, false);
+    }
+  }
+  body.grid-3-col #content {
+    .view-id-earthday_join.view-display-id-slideshow_pane {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12);
+    }
+    .view-id-earthday_shop.view-display-id-slideshow_pane {
+      @include zen-float(left);
+      @include zen-grid-flow-item(4, 12, false, false);
+    }
+  }
 }
