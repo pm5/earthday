@@ -64,8 +64,7 @@ li a.active {
     padding: 0;
     text-align: left; /* LTR */
 
-    li { /* A simple method to get navigation links to appear in one line. */
-      padding: 0 10px; /* LTR */
+    li {
       list-style-type: none;
       list-style-image: none;
     }
@@ -80,6 +79,18 @@ li a.active {
  */
 
 #main-menu {
+  a {
+    padding: 0.1em 0.6em;
+    border-radius: 0.7em;
+  }
+  a:hover {
+    background: $main-menu-hover;
+    text-decoration: none;
+  }
+  a.active-trail {
+    background: $main-menu-active;
+    text-decoration: none;
+  }
 }
 
 #secondary-menu {

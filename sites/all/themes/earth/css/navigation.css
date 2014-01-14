@@ -69,9 +69,6 @@ li a.active {
 /* line 67, ../sass/navigation.scss */
 #navigation ul.links li,
 #navigation ul.menu li {
-  /* A simple method to get navigation links to appear in one line. */
-  padding: 0 10px;
-  /* LTR */
   list-style-type: none;
   list-style-image: none;
 }
@@ -79,7 +76,23 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 85, ../sass/navigation.scss */
+/* line 82, ../sass/navigation.scss */
+#main-menu a {
+  padding: 0.1em 0.6em;
+  border-radius: 0.7em;
+}
+/* line 86, ../sass/navigation.scss */
+#main-menu a:hover {
+  background: #5c8b8a;
+  text-decoration: none;
+}
+/* line 90, ../sass/navigation.scss */
+#main-menu a.active-trail {
+  background: #217976;
+  text-decoration: none;
+}
+
+/* line 96, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
