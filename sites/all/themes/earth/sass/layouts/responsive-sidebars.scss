@@ -81,27 +81,24 @@ $zen-auto-include-flow-item-base: true;
   @include zen-grid-container();
 }
 
-.with-grid-background {
-  #header,
-  #highlighted,
-  #main,
-  #footer,
-  #footer-left-right {
-    @include zen-grid-background();
-  }
-}
-
 @media all and (max-width: 479px) {
+  $zen-column-count: 1;
+  @include with-grid-background;
 }
 
 @media all and (min-width: 480px) {
+  $zen-column-count: 3;
+  @include with-grid-background;
 }
 
 @media all and (min-width: 480px) and (max-width: 959px) {
+  $zen-column-count: 3;
+  @include with-grid-background;
 }
 
 @media all and (min-width: 960px) {
   $zen-column-count: 12;
+  @include with-grid-background;
 
   #logo {
     @include zen-grid-item(1, 1);

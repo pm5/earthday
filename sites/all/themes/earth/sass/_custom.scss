@@ -57,3 +57,16 @@
     }
   }
 }
+
+// Mixin to support "show grid background" in themes
+@mixin with-grid-background {
+  .with-grid-background {
+    #header,
+    #highlighted,
+    #main,
+    #footer,
+    #footer-left-right {
+      @include zen-grid-background();
+    }
+  }
+}
