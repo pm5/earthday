@@ -155,14 +155,19 @@ td.menu-disabled {
  */
 #search-block-form {
   #edit-submit {
-    background-color: #ffb11b;
+    background-color: $color-second;
     color: #fff;
-    border: 2px solid #ffb11b;
+    border: 2px solid $color-second;
     position: relative;
     left: -0.4em;
 
     /* XXX unnormalized Chrome CSS */
     line-height: 1em;
+  }
+
+  #edit-submit:hover {
+    background-color: $main-menu-hover;
+    border-color: $main-menu-hover;
   }
 
   .form-text {

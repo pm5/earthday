@@ -2,6 +2,9 @@
  * @file
  * Form Styling
  */
+/*
+ * Colors
+ */
 /* line 9, ../sass/forms.scss */
 .form-item {
   /* Wrapper for a form element (or group of form elements) and its label */
@@ -174,6 +177,11 @@ td.menu-disabled {
   line-height: 1em;
 }
 /* line 168, ../sass/forms.scss */
+#search-block-form #edit-submit:hover {
+  background-color: #5c8b8a;
+  border-color: #5c8b8a;
+}
+/* line 173, ../sass/forms.scss */
 #search-block-form .form-text {
   border: 0;
 }

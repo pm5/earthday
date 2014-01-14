@@ -70,3 +70,34 @@
     }
   }
 }
+
+/*
+ * Colors
+ */
+
+$color-main:            #66bab7;
+$color-main-lighter:    #92ddda;
+$color-main-lightest:   #a6ddda;
+$color-main-darker:     #5c8b8a;
+$color-main-darkest:    #217976;
+$color-main-text:       #fcfcfc;
+
+$color-second:          #ffb11b;
+
+$header-background:     $color-main;
+$header-text:           #fafafa;
+$highlighted-background:#fcfcfc;
+$main-menu-hover:       $color-main-darker;
+$main-menu-active:      $color-main-darkest;
+$menu-tab-background:   #e9e9e9;
+$menu-tab-hover:        #a6ddda;
+$menu-tab-active:       #d3d3d3;
+$main-ruler:            $color-second;
+$main-background:       #f0f8f5;
+$main-text:             #000000;
+$main-block-background: #fcfcfc;
+$footer-background:     $color-main;
+$footer-text:           #fafafa;
+$thin-line:             #dfdfdf;
+$thin-line-radius:      4px;
+

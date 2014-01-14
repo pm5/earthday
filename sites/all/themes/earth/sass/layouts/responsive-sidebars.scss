@@ -45,7 +45,7 @@ $zen-auto-include-flow-item-base: true;
   /* For screen sizes larger than 1200px, prevent excessively long lines of text
      by setting a max-width. */
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1200px;
 }
 
 #header-wrapper,
@@ -102,10 +102,18 @@ $zen-auto-include-flow-item-base: true;
 
   #logo {
     @include zen-grid-item(1, 1);
+    img {
+      vertical-align: bottom;
+      width: 86px;
+      max-width: 200%;
+      margin-top: 10px;
+      position: relative;
+      left: -20px;
+    }
   }
 
   #name-and-slogan {
-    margin-top: 14px;
+    margin-top: 32px;
     h1 {
       @include zen-grid-item(5, 2);
     }
@@ -120,8 +128,8 @@ $zen-auto-include-flow-item-base: true;
   }
 
   #navigation {
-    @include zen-clear(right);
-    @include zen-grid-item(11, 2);
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
   }
 
   .region-highlighted {
