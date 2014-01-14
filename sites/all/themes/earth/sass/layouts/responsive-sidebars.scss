@@ -123,6 +123,9 @@ $zen-auto-include-flow-item-base: true;
 
   .region-highlighted {
     @include zen-grid-item(10, 2);
+    div.slideshow-text {
+      display: none;
+    }
   }
 
   #footer-left-right .region-footer-left {
