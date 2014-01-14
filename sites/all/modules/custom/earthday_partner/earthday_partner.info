@@ -1,0 +1,13 @@
+name = Earthday Partner
+description = Display partner logos in footer.
+core = 7.x
+package = Earthday TW
+version = 7.x-1.0beta
+project = earthday_partner
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[image][] = earthday-partner
+features[views_view][] = earthday_partner
