@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Earthday Slideshow feature.
+ */
+
+include_once 'earthday_slideshow.features.inc';
