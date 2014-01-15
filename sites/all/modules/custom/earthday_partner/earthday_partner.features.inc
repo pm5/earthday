@@ -33,7 +33,7 @@ function earthday_partner_image_default_styles() {
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => '200',
-          'height' => '200',
+          'height' => '100',
         ),
         'weight' => '1',
       ),
@@ -59,4 +59,21 @@ function earthday_partner_image_default_styles() {
   );
 
   return $styles;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function earthday_partner_node_info() {
+  $items = array(
+    'earthday_partner' => array(
+      'name' => t('地球日夥伴'),
+      'base' => 'node_content',
+      'description' => t('贊助廠商。會在頁尾持續出現。'),
+      'has_title' => '1',
+      'title_label' => t('名稱'),
+      'help' => '',
+    ),
+  );
+  return $items;
 }
