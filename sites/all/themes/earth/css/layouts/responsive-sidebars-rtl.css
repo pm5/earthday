@@ -27,7 +27,7 @@
   /* For screen sizes larger than 1200px, prevent excessively long lines of text
      by setting a max-width. */
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1024px;
 }
 
 /* line 54, ../../sass/layouts/responsive-sidebars.scss */
