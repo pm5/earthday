@@ -191,6 +191,7 @@ body {
     background-color: $main-block-background;
     border-left: solid $thin-line 1px;
     border-right: solid $thin-line 1px;
+    width: 100%;
 
     h3, p {
       margin: 0;
@@ -213,7 +214,13 @@ body {
 
   .views-field-title {
     overflow-y: hidden;
-    height: 2em;
+    height: 4em;
+    display: table;
+
+    h3 {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 
   .views-field-body {
@@ -238,7 +245,7 @@ body {
   }
 
   .flex-control-nav {
-    bottom: 160px;
+    bottom: 208px;
   }
 
 }
