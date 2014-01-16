@@ -170,8 +170,6 @@
   </div>
 
   <div id="footer-wrapper">
-    <?php print render($page['footer']); ?>
-
     <?php
       // Render the sidebars to see if there's anything in them.
       $footer_left  = render($page['footer_left']);
@@ -184,6 +182,8 @@
         <?php print $footer_right; ?>
       </footer><!-- /.footers -->
     <?php endif; ?>
+
+    <?php print render($page['footer']); ?>
 
   </div>
 
