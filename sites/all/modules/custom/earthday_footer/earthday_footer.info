@@ -1,0 +1,12 @@
+name = Earthday Footer
+description = Footer content for Earthday TW web site.
+core = 7.x
+package = Earthday TW
+php = 5.2.4
+version = 7.x-1.0-beta
+project = earthday_footer
+dependencies[] = ctools
+dependencies[] = panels_mini
+features[ctools][] = panels_mini:panels_default:1
+features[features_api][] = api:1
+features[panels_mini][] = footer_content
