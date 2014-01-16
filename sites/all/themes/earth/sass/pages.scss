@@ -72,6 +72,12 @@ body {
   background-color: $highlighted-background;
 }
 
+#highlighted-wrapper {
+  padding: 1em 0px;
+  border-bottom: solid 3px #eee;
+}
+
+
 #main-wrapper {
   background-color: $main-background;
   color: $main-text;
