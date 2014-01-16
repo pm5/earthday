@@ -38,6 +38,7 @@ $zen-auto-include-flow-item-base: true;
  */
 
 #header,
+#navigation,
 #highlighted,
 #main,
 #footer,
@@ -49,6 +50,7 @@ $zen-auto-include-flow-item-base: true;
 }
 
 #header-wrapper,
+#navigation--wrapper,
 #highlighted-wrapper,
 #main-wrapper,
 #footer-wrapper {
@@ -61,6 +63,7 @@ $zen-auto-include-flow-item-base: true;
 // See the note about $zen-auto-include-item-base above.
 
 #header,
+#navigation,
 #highlighted,
 #main,
 #footer,
@@ -74,6 +77,7 @@ $zen-auto-include-flow-item-base: true;
  */
 
 #header,
+#navigation,
 #highlighted,
 #main,
 #footer,
@@ -125,11 +129,6 @@ $zen-auto-include-flow-item-base: true;
 
   .region-header {
     @include zen-grid-item(3, 1, right);
-  }
-
-  #navigation {
-    @include zen-clear();
-    @include zen-grid-item(12, 1);
   }
 
   .region-highlighted {
