@@ -79,12 +79,13 @@ function earthday_slideshow_views_default_views() {
   $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['label'] = '';
   $handler->display->display_options['fields']['title_field']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_field']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title_field']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['title_field']['element_type'] = '0';
   $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title_field']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title_field']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title_field']['field_api_classes'] = TRUE;
-  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
   /* 欄位: 內容: 內文 */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -106,8 +107,7 @@ function earthday_slideshow_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = '內容: 輪播文字';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title_field]
-[body]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title_field]';
   $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_class'] = 'slideshow-text';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
@@ -189,8 +189,7 @@ function earthday_slideshow_views_default_views() {
     t('遞增'),
     t('遞減'),
     t('[path]'),
-    t('[title_field]
-[body]'),
+    t('[title_field]'),
     t('所有'),
     t('Content pane'),
     t('Earthday TW'),

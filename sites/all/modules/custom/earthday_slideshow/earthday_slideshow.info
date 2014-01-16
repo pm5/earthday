@@ -2,6 +2,7 @@ name = Earthday Slideshow
 description = Slideshow feature for Earthday Day TW web site.
 core = 7.x
 package = Earthday TW
+php = 5.2.4
 version = 7.x-1.0beta
 project = earthday_slideshow
 dependencies[] = ctools

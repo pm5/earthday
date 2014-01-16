@@ -141,9 +141,10 @@ function earthday_slideshow_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
+      'fences_wrapper' => 'div',
       'field_name' => 'field_category',
       'label' => '分類',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
