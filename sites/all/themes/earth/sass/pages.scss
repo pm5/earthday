@@ -53,6 +53,16 @@ body {
   background-color: $color-second;
 }
 
+#highlighted-wrapper {
+  padding: 1em 0px;
+  border-bottom: solid 3px #eee;
+}
+
+#highlighted-wrapper,
+#highlighted {
+  background-color: $highlighted-background;
+}
+
 #header-wrapper,
 #navigation-wrapper {
   color: $header-text;
@@ -67,18 +77,8 @@ body {
   }
 }
 
-#highlighted-wrapper,
-#highlighted {
-  background-color: $highlighted-background;
-}
-
+#main-wrapper,
 #highlighted-wrapper {
-  padding: 1em 0px;
-  border-bottom: solid 3px #eee;
-}
-
-
-#main-wrapper {
   background-color: $main-background;
   color: $main-text;
 
@@ -166,7 +166,17 @@ body {
     }
 }
 
-/*
+/**
+ * Highlighted
+ */
+
+#highlighted {
+  h3 {
+    text-align: center;
+  }
+}
+
+/**
  * Content
  */
 
@@ -188,6 +198,7 @@ body {
     h3 {
       font-size: 1em;
       padding: 0.4em 30px;
+      text-align: center;
     }
     p {
       padding: 0.2em 30px;
