@@ -252,7 +252,7 @@ body {
 
 body.page-node {
 
-  .panel-col-first .inside {
+  #content .panel-col-first .inside {
     background-color: $main-block-background;
     padding: 1.7em;
     border: solid $thin-line 1px;

@@ -269,7 +269,7 @@ body {
 }
 
 /* line 255, ../sass/pages.scss */
-body.page-node .panel-col-first .inside {
+body.page-node #content .panel-col-first .inside {
   background-color: #fcfcfc;
   padding: 1.7em;
   border: solid #dfdfdf 1px;
