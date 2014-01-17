@@ -44,7 +44,7 @@ function earthday_footer_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => '版權聲明',
       'title' => '',
-      'body' => '<div>本站採用<a href="creativecommons.org/licenses/by-nc-nd/3.0/tw/" target="_blank">創用CC姓名標示-非商業性-禁止改作 2.0 台灣</a>授權條款授權<br />所有內容歡迎非營利轉載 商業轉載使用請來信洽詢授權 <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">(CC BY-NC-ND 2.0 TW)</a></div>',
+      'body' => '<div>本站係採用<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">創用 CC 姓名標示-非商業性-禁止改作 3.0 台灣 授權條款</a>授權<br>所有內容歡迎非營利轉載 商業轉載使用請來信洽詢授權 <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/tw/80x15.png" alt="創用 CC 授權條款"></a></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -68,7 +68,7 @@ function earthday_footer_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => '聯絡協會',
       'title' => '',
-      'body' => '<div><a href="http://www.e-info.org.tw" target="_blank">台灣環境資訊協會</a> / <a href="http://www.e-info.org.tw" target="_blank">Taiwan Environmental Info Association</a><br />TEL:886-2-29332233 / FAX:886-2-29332120<br />地址：116台北市文山區萬隆街38號（地圖）&nbsp; / <a href="mailto:earthday@e-info.org.tw">earthday@e-info.org.tw</a></div>',
+      'body' => '<div><a target="_blank" href="http://www.e-info.org.tw">台灣環境資訊協會</a> / <a target="_blank" href="http://www.e-info.org.tw">Taiwan Environmental Info Association</a><br>TEL:886-2-29332233 / FAX:886-2-29332120<br>地址：116台北市文山區萬隆街38號（<a target="_blank" href="http://goo.gl/maps/QIjeb">地圖</a>）&nbsp; / <a href="mailto:earthday@e-info.org.tw"><img width="24" height="24" title="寄信給我們" alt="E-mail" src="/sites/all/modules/custom/earthday_footer/mail.png" typeof="foaf:Image" class="media-element file-full"></a></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
