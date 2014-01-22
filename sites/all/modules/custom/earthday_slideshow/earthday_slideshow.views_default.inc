@@ -156,6 +156,24 @@ function earthday_slideshow_views_default_views() {
     'earthday_slideshow' => 'earthday_slideshow',
   );
   $handler->display->display_options['filters']['type']['group'] = 2;
+  /* Filter criterion: 內容: 分類 (field_category) */
+  $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['filters']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_category_tid']['value'] = array(
+    0 => '5',
+  );
+  $handler->display->display_options['filters']['field_category_tid']['vocabulary'] = 'categories';
+  /* Filter criterion: 內容: 類型 */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['operator'] = 'not in';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'earthday_shop' => 'earthday_shop',
+    'earthday_join' => 'earthday_join',
+  );
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'earthday_slideshow_pane');
