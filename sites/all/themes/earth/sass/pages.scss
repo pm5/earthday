@@ -60,7 +60,7 @@ body {
 
 #highlighted-wrapper,
 #highlighted {
-  background-color: $highlighted-background;
+  /*background-color: $highlighted-background;*/
 }
 
 #header-wrapper,
@@ -261,8 +261,6 @@ body.page-node {
 }
 
 .region-highlighted {
-  background: #ffffff;
-
   .block:last-child {
     margin-bottom: 0px;
   }
