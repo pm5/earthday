@@ -139,11 +139,15 @@
 
     </div><!-- /#navigation -->
   </div>
+  <?php
+    $highlighted = render($page['highlighted']);
+    if ($highlighted) : ?>
   <div id="highlighted-wrapper">
     <div id="highlighted">
-      <?php print render($page['highlighted']); ?>
+      <?php print $highlighted; ?>
     </div>
   </div>
+  <?php endif; ?>
 
   <div id="main-wrapper">
     <div id="main">
