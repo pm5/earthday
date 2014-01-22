@@ -480,7 +480,11 @@
      * Panels
      */
   }
-  /* line 240, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 239, ../../sass/layouts/responsive-sidebars.scss */
+  #content .panel-3col-33-stacked .panel-col-top .inside {
+    margin-bottom: 0;
+  }
+  /* line 242, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-first {
     float: left;
     width: 33.33333%;
@@ -494,11 +498,11 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 242, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 244, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-first .inside {
     margin: 0;
   }
-  /* line 246, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 248, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col {
     float: left;
     width: 33.33333%;
@@ -512,11 +516,11 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 248, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 250, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col .inside {
     margin: 0;
   }
-  /* line 252, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 254, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-last {
     float: left;
     width: 33.33333%;
@@ -530,7 +534,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 254, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 256, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-last .inside {
     margin: 0;
   }

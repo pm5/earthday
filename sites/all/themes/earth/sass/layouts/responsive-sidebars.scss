@@ -235,8 +235,10 @@ $zen-auto-include-flow-item-base: true;
     /**
      * Panels
      */
-
     .panel-3col-33-stacked {
+      .panel-col-top .inside {
+        margin-bottom: 0;
+      }
       .panel-col-first {
         @include zen-grid-item(4, 1);
         .inside {
