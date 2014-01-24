@@ -173,10 +173,29 @@ body {
 #highlighted {
   h3 {
     text-align: center;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $main-block-background;
+    border-right: solid $thin-line 1px;
+    border-left: solid $thin-line 1px;
+    border-bottom: solid $thin-line 1px;
+    border-radius: 0 0 $thin-line-radius $thin-line-radius;
   }
   .field-image img {
-    border: solid $thin-line 1px;
-    border-radius: $thin-line-radius;
+    border-top: solid $thin-line 1px;
+    border-right: solid $thin-line 1px;
+    border-left: solid $thin-line 1px;
+    border-radius: $thin-line-radius $thin-line-radius 0 0;
+  }
+  .flex-control-nav {
+    position: absolute;
+    top: 83%;
+  }
+
+  .flex-direction-nav a {
+    top: 46.2%;
   }
 }
 
@@ -249,7 +268,8 @@ body {
   }
 
   .flex-control-nav {
-    bottom: 208px;
+    position: absolute;
+    top: 190px;
   }
 
 }

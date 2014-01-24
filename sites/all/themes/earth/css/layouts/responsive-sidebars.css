@@ -352,17 +352,12 @@
     margin-right: -13.33333px;
   }
 
-  /* line 187, ../../sass/layouts/responsive-sidebars.scss */
-  #highlighted .flex-control-nav {
-    bottom: 75px;
-  }
-
-  /* line 194, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 188, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content {
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 197, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 191, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-first {
     float: left;
     width: 75%;
@@ -376,7 +371,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 201, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 195, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-last {
     float: left;
     width: 25%;
@@ -390,7 +385,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 204, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 198, ../../sass/layouts/responsive-sidebars.scss */
   body.page-node #content .panel-col-last .views-row {
     padding-left: 10px;
     padding-right: 10px;
@@ -405,12 +400,12 @@
     margin-right: 0px;
   }
 
-  /* line 212, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 206, ../../sass/layouts/responsive-sidebars.scss */
   #content > .view.grid-3-col,
   body.grid-3-col #content .view {
     /* panel pages */
   }
-  /* line 213, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 207, ../../sass/layouts/responsive-sidebars.scss */
   #content > .view.grid-3-col .views-row,
   body.grid-3-col #content .view .views-row {
     float: left;
@@ -426,7 +421,7 @@
     padding-right: 13.33333px;
     margin-right: 6.66667px;
   }
-  /* line 218, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 212, ../../sass/layouts/responsive-sidebars.scss */
   #content > .view.grid-3-col .views-row:nth-child(3n),
   body.grid-3-col #content .view .views-row:nth-child(3n) {
     float: left;
@@ -443,7 +438,7 @@
     margin-right: -13.33333px;
   }
 
-  /* line 224, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 218, ../../sass/layouts/responsive-sidebars.scss */
   body.grid-3-col #content .view-id-earthday_join.view-display-id-slideshow_pane {
     float: left;
     padding-left: 10px;
@@ -458,7 +453,7 @@
     padding-right: 13.33333px;
     margin-right: 6.66667px;
   }
-  /* line 228, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 222, ../../sass/layouts/responsive-sidebars.scss */
   body.grid-3-col #content .view-id-earthday_shop.view-display-id-slideshow_pane {
     float: left;
     padding-left: 10px;
@@ -474,17 +469,17 @@
     margin-right: -13.33333px;
   }
 
-  /* line 234, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 228, ../../sass/layouts/responsive-sidebars.scss */
   #content {
     /**
      * Panels
      */
   }
-  /* line 239, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 233, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-top .inside {
     margin-bottom: 0;
   }
-  /* line 242, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 236, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-first {
     float: left;
     width: 33.33333%;
@@ -498,11 +493,11 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 244, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 238, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-first .inside {
     margin: 0;
   }
-  /* line 248, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 242, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col {
     float: left;
     width: 33.33333%;
@@ -516,11 +511,11 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 250, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 244, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col .inside {
     margin: 0;
   }
-  /* line 254, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 248, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-last {
     float: left;
     width: 33.33333%;
@@ -534,7 +529,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 256, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 250, ../../sass/layouts/responsive-sidebars.scss */
   #content .panel-3col-33-stacked .panel-col-last .inside {
     margin: 0;
   }
