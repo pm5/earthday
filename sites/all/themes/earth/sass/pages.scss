@@ -185,15 +185,12 @@ body {
   }
   .field-image img {
     border-top: solid $thin-line 1px;
-    border-right: solid $thin-line 1px;
-    border-left: solid $thin-line 1px;
     border-radius: $thin-line-radius $thin-line-radius 0 0;
   }
   .flex-control-nav {
     position: absolute;
     top: 83%;
   }
-
   .flex-direction-nav a {
     top: 46.2%;
   }
