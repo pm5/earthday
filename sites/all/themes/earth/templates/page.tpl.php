@@ -114,7 +114,9 @@
   <div id="navigation-wrapper">
     <div id="navigation">
 
-      <?php if ($main_menu): ?>
+      <?php
+        $navigation = render($page['navigation']);
+        if ($main_menu || $navigation): ?>
         <nav id="main-menu" role="navigation">
           <?php
           // This code snippet is hard to modify. We recommend turning off the
@@ -132,11 +134,9 @@
               'class' => array('element-invisible'),
             ),
           )); ?>
+          <?php print $navigation; ?>
         </nav>
       <?php endif; ?>
-
-      <?php print render($page['navigation']); ?>
-
     </div><!-- /#navigation -->
   </div>
   <?php
