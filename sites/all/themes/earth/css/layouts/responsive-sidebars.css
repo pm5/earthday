@@ -140,11 +140,11 @@
   /* line 109, ../../sass/layouts/responsive-sidebars.scss */
   #logo img {
     vertical-align: bottom;
-    width: 86px;
+    width: 131px;
     max-width: 200%;
     margin-top: 10px;
     position: relative;
-    left: -20px;
+    left: -40px;
   }
 
   /* line 119, ../../sass/layouts/responsive-sidebars.scss */
