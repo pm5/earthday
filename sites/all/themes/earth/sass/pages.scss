@@ -173,6 +173,26 @@ body {
 #highlighted {
   h3 {
     text-align: center;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $main-block-background;
+    border-right: solid $thin-line 1px;
+    border-left: solid $thin-line 1px;
+    border-bottom: solid $thin-line 1px;
+    border-radius: 0 0 $thin-line-radius $thin-line-radius;
+  }
+  .field-image img {
+    border-top: solid $thin-line 1px;
+    border-radius: $thin-line-radius $thin-line-radius 0 0;
+  }
+  .flex-control-nav {
+    position: absolute;
+    top: 83%;
+  }
+  .flex-direction-nav a {
+    top: 46.2%;
   }
 }
 
@@ -198,11 +218,11 @@ body {
     }
     h3 {
       font-size: 1em;
-      padding: 0.4em 30px;
+      padding: 0.4em 1.33em 0;
       text-align: center;
     }
     p {
-      padding: 0.2em 30px;
+      padding: 0.2em 1.33em;
     }
   }
 
@@ -214,7 +234,7 @@ body {
 
   .views-field-title {
     overflow-y: hidden;
-    height: 4em;
+    height: 3.1em;
     display: table;
 
     h3 {
@@ -245,7 +265,8 @@ body {
   }
 
   .flex-control-nav {
-    bottom: 208px;
+    position: absolute;
+    top: 190px;
   }
 
 }

@@ -42,7 +42,7 @@ $zen-auto-include-flow-item-base: true;
 #highlighted,
 #main,
 #footer,
-#footer-left-right { 
+#footer-left-right {
   /* For screen sizes larger than 1200px, prevent excessively long lines of text
      by setting a max-width. */
   margin: 0 auto;
@@ -180,12 +180,6 @@ $zen-auto-include-flow-item-base: true;
     .panel-pane:nth-child(6n+5) {
       @include zen-float(left);
       @include zen-grid-flow-item(4, 12, false, false)
-    }
-  }
-
-  #highlighted {
-    .flex-control-nav {
-      bottom: 75px;
     }
   }
 
