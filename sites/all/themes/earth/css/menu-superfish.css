@@ -1,0 +1,280 @@
+/*
+ * Sample SCSS for adding Superfish styles to themes.
+ *
+ * Instructions:
+ * 
+ * 1. Change the #block-superfish-1 (below) to the ID of your Superfish menu.
+ *
+ * 2. Add the SCSS to your theme, either as a separate SCSS file or as a part of the main SCSS file.
+ *
+ * 3. Note that by removing the .sf-style-none, the style will be applied to the menu regardless of
+ *    the Style selected in the block configuration.
+ *
+ */
+/*
+ * Colors
+ */
+/* line 20, ../sass/menu-superfish.scss */
+.sf-menu.sf-horizontal.sf-shadow ul,
+.sf-menu.sf-vertical.sf-shadow ul,
+.sf-menu.sf-navbar.sf-shadow ul ul {
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0 !important;
+}
+
+/* line 28, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none {
+  float: left;
+  margin: 0;
+  padding: 0;
+  /* compact layout */
+}
+/* line 32, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none.sf-navbar {
+  width: 100%;
+  background: #ffb11b;
+}
+/* line 36, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none ul {
+  padding-left: 0;
+}
+/* line 39, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper {
+  background: #5c8b8a;
+}
+/* line 41, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper li {
+  background: transparent;
+}
+/* line 48, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none a {
+  color: #fafafa;
+  /*padding: 0.75em 1em;*/
+}
+/* line 51, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none a.sf-with-ul {
+  /*padding-right: 2.25em;*/
+}
+/* line 54, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none a:focus {
+  background: #5c8b8a;
+  outline: 0;
+}
+/* line 58, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none a:hover {
+  background: #5c8b8a;
+  outline: 0;
+}
+/* line 62, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none a:active {
+  background: #5c8b8a;
+  outline: 0;
+}
+/* line 68, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none span.nolink {
+  color: #fafafa;
+  padding: 0.75em 1em;
+}
+/* line 71, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none span.nolink.sf-with-ul {
+  padding-right: 2.25em;
+}
+/* line 74, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none span.nolink:hover {
+  background: #5c8b8a;
+  outline: 0;
+}
+/* line 79, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none span.sf-description {
+  color: #fafafa;
+  display: block;
+  font-size: 0.833em;
+  line-height: 1.5;
+  margin: 5px 0 0 5px;
+  padding: 0;
+}
+/* line 90, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none.rtl span.sf-description {
+  margin: 5px 5px 0 0;
+}
+/* line 93, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none.rtl span.nolink.sf-with-ul {
+  padding-left: 2.25em;
+  padding-right: 1em;
+}
+/* line 98, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none.rtl a.sf-with-ul {
+  padding-left: 2.25em;
+  padding-right: 1em;
+}
+/* line 103, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none ul {
+  background: #ffb11b;
+}
+/* line 106, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none li {
+  background: #ffb11b;
+  border-radius: 2em;
+  height: 1.2em;
+}
+/* line 110, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none li li {
+  background: #ffb11b;
+}
+/* line 112, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none li li li {
+  background: #ffb11b;
+}
+/* line 116, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none li:hover {
+  background: #5c8b8a;
+  outline: 0;
+}
+/* line 119, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none li:hover > ul {
+  top: 1.2em;
+}
+/* line 123, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none li.sfHover {
+  background: #5c8b8a;
+  outline: 0;
+}
+/* line 126, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none li.sfHover > ul {
+  top: 1.2em;
+}
+/* line 131, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-style-none .sf-sub-indicator {
+  background-image: url("../images/dropdown-arrows.png");
+}
+/* line 136, ../sass/menu-superfish.scss */
+#block-superfish-1 div.sf-accordion-toggle.sf-style-none a {
+  background: #ffb11b;
+  color: #fafafa;
+  padding: 1em;
+}
+/* line 140, ../sass/menu-superfish.scss */
+#block-superfish-1 div.sf-accordion-toggle.sf-style-none a.sf-expanded {
+  background-color: #5c8b8a;
+  font-weight: bold;
+}
+/* line 150, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li a {
+  padding-left: auto;
+  padding-right: 2em;
+}
+/* line 155, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li li a {
+  padding-left: auto;
+  padding-right: 3em;
+}
+/* line 160, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li li li a {
+  padding-left: auto;
+  padding-right: 4em;
+}
+/* line 165, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li li li li a {
+  padding-left: auto;
+  padding-right: 5em;
+}
+/* line 169, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li li li li span.nolink {
+  padding-left: auto;
+  padding-right: 5em;
+}
+/* line 174, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li li li span.nolink {
+  padding-left: auto;
+  padding-right: 4em;
+}
+/* line 179, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li li span.nolink {
+  padding-left: auto;
+  padding-right: 3em;
+}
+/* line 184, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl.sf-accordion li li span.nolink {
+  padding-left: auto;
+  padding-right: 2em;
+}
+/* line 193, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.rtl ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column {
+  float: right;
+}
+/* line 201, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li.sf-expanded {
+  background-color: #5c8b8a;
+}
+/* line 204, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li.sf-expanded > a {
+  font-weight: bold;
+}
+/* line 207, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li.sf-expanded > span.nolink {
+  font-weight: bold;
+}
+/* line 213, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li a {
+  padding-left: 2em;
+}
+/* line 217, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li li a {
+  padding-left: 3em;
+}
+/* line 221, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li li li a {
+  padding-left: 4em;
+}
+/* line 225, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li li li li a {
+  padding-left: 5em;
+}
+/* line 228, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li li li li span.nolink {
+  padding-left: 5em;
+}
+/* line 232, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li li li span.nolink {
+  padding-left: 4em;
+}
+/* line 236, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li li span.nolink {
+  padding-left: 3em;
+}
+/* line 240, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li li span.nolink {
+  padding-left: 2em;
+}
+/* line 244, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none.sf-accordion li a.sf-accordion-button {
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 499;
+}
+/* line 254, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 257, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper ol li {
+  margin: 0;
+  padding: 0;
+}
+/* line 260, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column {
+  display: inline;
+  float: left;
+}
+/* line 266, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper a.menuparent {
+  font-weight: bold;
+}
+/* line 270, ../sass/menu-superfish.scss */
+#block-superfish-1 .sf-menu.sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper span.nolink.menuparent {
+  font-weight: bold;
+}
