@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Earthday Shop feature.
+ */
+
+include_once 'earthday_shop.features.inc';

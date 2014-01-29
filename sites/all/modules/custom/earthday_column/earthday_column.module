@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Earthday Column feature.
+ */
+
+include_once 'earthday_column.features.inc';

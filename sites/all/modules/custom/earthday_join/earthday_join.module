@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Earthday Join feature.
+ */
+
+include_once 'earthday_join.features.inc';
