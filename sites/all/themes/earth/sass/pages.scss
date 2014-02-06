@@ -166,6 +166,22 @@ body {
     }
 }
 
+#content h2.pane-title {
+  text-align: center;
+  font-size: large;
+
+  a {
+    background-color: $color-main;
+    color: $header-text;
+    padding: 0.2em 1em;
+    border-radius: 1em;
+  }
+  a:hover, a:active {
+    background-color: $color-main-darker;
+    text-decoration: none;
+  }
+}
+
 /**
  * Highlighted
  */

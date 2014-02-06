@@ -44,6 +44,9 @@
 				}
 			}
 		}
+    li.active-trail {
+			background: $superfish-1-background-color-active;
+    }
     /* compact layout */
 		a {
 			color: $superfish-1-color;

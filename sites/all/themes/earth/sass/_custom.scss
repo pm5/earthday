@@ -83,6 +83,10 @@ $color-main-darkest:    #217976;
 $color-main-text:       #fcfcfc;
 
 $color-second:          #ffb11b;
+$color-second-lighter:  #ffc554;
+$color-second-darker:   #bf943f;
+$color-second-lightest: #ffd482;
+$color-second-darkest:  #a67109;
 
 $header-background:     $color-main;
 $header-text:           #fafafa;
@@ -102,8 +106,9 @@ $thin-line:             #d0d0d0;
 $thin-line-radius:      4px;
 
 $superfish-1-color:     $header-text;
-$superfish-1-background-color-level-first: $main-ruler;
+$superfish-1-background-color-level-first: $color-second;
 $superfish-1-background-color-level-second: $superfish-1-background-color-level-first;
 $superfish-1-background-color-level-third: $superfish-1-background-color-level-first;
-$superfish-1-background-color-level-fourth: $color-main-darker;
+$superfish-1-background-color-level-fourth: $color-second-darkest;
+$superfish-1-background-color-active: $color-second-darker;
 
