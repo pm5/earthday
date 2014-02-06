@@ -131,6 +131,10 @@ $zen-auto-include-flow-item-base: true;
     @include zen-grid-item(3, 1, right);
   }
 
+  .region-navigation {
+    @include zen-grid-item(10, 2);
+  }
+
   .region-highlighted {
     @include zen-grid-item(10, 2);
     div.slideshow-text {
