@@ -94,11 +94,15 @@
   word-wrap: break-word;
 }
 
-/* line 67, ../sass/nodes.scss */
+/* line 68, ../sass/nodes.scss */
+#main-wrapper
 article h2 {
   border-bottom: 1px solid #3e3e3e;
 }
-/* line 71, ../sass/nodes.scss */
-article a {
+/* line 72, ../sass/nodes.scss */
+#main-wrapper
+article a, #main-wrapper
+article a:link, #main-wrapper
+article a:visited {
   color: #217976;
 }
