@@ -63,12 +63,13 @@
   }
 }
 
+#main-wrapper
 article {
   h2 {
     border-bottom: 1px solid $main-text;
   }
 
-  a {
+  a, a:link, a:visited {
     color: $color-main-darkest;
   }
 }
