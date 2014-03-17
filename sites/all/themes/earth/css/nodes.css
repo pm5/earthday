@@ -93,3 +93,12 @@
   text-align: center;
   word-wrap: break-word;
 }
+
+/* line 67, ../sass/nodes.scss */
+article h2 {
+  border-bottom: 1px solid #3e3e3e;
+}
+/* line 71, ../sass/nodes.scss */
+article a {
+  color: #217976;
+}

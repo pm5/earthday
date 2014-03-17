@@ -1,0 +1,12 @@
+/*
+ * Colors
+ */
+/* line 4, ../sass/editor.scss */
+h2 {
+  border-bottom: 1px solid #3e3e3e;
+}
+
+/* line 8, ../sass/editor.scss */
+a {
+  color: #217976;
+}
