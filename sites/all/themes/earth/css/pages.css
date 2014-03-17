@@ -17,18 +17,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "微軟正黑體", "儷黑 Pro", "新細明體", sans-serif;
+  /*font-family: "微軟正黑體", "儷黑 Pro", "新細明體", sans-serif;*/
+  font-family: "Helvetica Neue", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Arial", sans-serif;
 }
 
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
  */
-/* line 30, ../sass/pages.scss */
+/* line 31, ../sass/pages.scss */
 #skip-link {
   margin: 0;
 }
-/* line 34, ../sass/pages.scss */
+/* line 35, ../sass/pages.scss */
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -42,34 +43,34 @@ body {
 /*
  * Header
  */
-/* line 48, ../sass/pages.scss */
+/* line 49, ../sass/pages.scss */
 #header-wrapper {
   background-color: #66bab7;
 }
 
-/* line 52, ../sass/pages.scss */
+/* line 53, ../sass/pages.scss */
 #navigation-wrapper {
   background-color: #ffb11b;
 }
 
-/* line 56, ../sass/pages.scss */
+/* line 57, ../sass/pages.scss */
 #highlighted-wrapper {
   padding: 1em 0px;
   border-bottom: solid 3px #eee;
 }
 
-/* line 62, ../sass/pages.scss */
+/* line 63, ../sass/pages.scss */
 #highlighted-wrapper,
 #highlighted {
   /*background-color: $highlighted-background;*/
 }
 
-/* line 67, ../sass/pages.scss */
+/* line 68, ../sass/pages.scss */
 #header-wrapper,
 #navigation-wrapper {
   color: #fafafa;
 }
-/* line 70, ../sass/pages.scss */
+/* line 71, ../sass/pages.scss */
 #header-wrapper a:link,
 #header-wrapper a:visited,
 #navigation-wrapper a:link,
@@ -77,7 +78,7 @@ body {
   color: #fafafa;
   text-decoration: none;
 }
-/* line 75, ../sass/pages.scss */
+/* line 76, ../sass/pages.scss */
 #header-wrapper a:hover,
 #header-wrapper a:focus,
 #navigation-wrapper a:hover,
@@ -85,21 +86,21 @@ body {
   text-decoration: underline;
 }
 
-/* line 81, ../sass/pages.scss */
+/* line 82, ../sass/pages.scss */
 #main-wrapper,
 #highlighted-wrapper {
   background-color: #f0f8f5;
-  color: black;
+  color: #3e3e3e;
 }
-/* line 86, ../sass/pages.scss */
+/* line 87, ../sass/pages.scss */
 #main-wrapper a:link,
 #main-wrapper a:visited,
 #highlighted-wrapper a:link,
 #highlighted-wrapper a:visited {
-  color: black;
+  color: #3e3e3e;
   text-decoration: none;
 }
-/* line 92, ../sass/pages.scss */
+/* line 93, ../sass/pages.scss */
 #main-wrapper a:hover,
 #main-wrapper a:focus,
 #highlighted-wrapper a:hover,
@@ -107,41 +108,41 @@ body {
   text-decoration: underline;
 }
 
-/* line 97, ../sass/pages.scss */
+/* line 98, ../sass/pages.scss */
 #footer-wrapper {
   background-color: #66bab7;
   color: #fafafa;
 }
-/* line 102, ../sass/pages.scss */
+/* line 103, ../sass/pages.scss */
 #footer-wrapper a:link,
 #footer-wrapper a:visited {
   color: #fafafa;
   text-decoration: none;
 }
-/* line 108, ../sass/pages.scss */
+/* line 109, ../sass/pages.scss */
 #footer-wrapper a:hover,
 #footer-wrapper a:focus {
   text-decoration: underline;
 }
 
-/* line 113, ../sass/pages.scss */
+/* line 114, ../sass/pages.scss */
 #logo {
   /* Wrapping link for logo */
 }
 
-/* line 116, ../sass/pages.scss */
+/* line 117, ../sass/pages.scss */
 #name-and-slogan {
   /* Wrapper for website name and slogan */
 }
 
-/* line 119, ../sass/pages.scss */
+/* line 120, ../sass/pages.scss */
 #site-name {
   /* The name of the website */
   margin: 0;
   font-size: 1em;
 }
 
-/* line 124, ../sass/pages.scss */
+/* line 125, ../sass/pages.scss */
 #site-slogan {
   /* The slogan (or tagline) of a website */
   margin: 0;
@@ -149,7 +150,7 @@ body {
   font-size: 2em;
 }
 
-/* line 130, ../sass/pages.scss */
+/* line 131, ../sass/pages.scss */
 .region-header {
   margin-top: 10px;
 }
@@ -157,7 +158,7 @@ body {
 /*
  * Main (container for everything else)
  */
-/* line 138, ../sass/pages.scss */
+/* line 139, ../sass/pages.scss */
 #main {
   padding: 7px 0;
 }
@@ -165,11 +166,11 @@ body {
 /*
  * Navigation
  */
-/* line 145, ../sass/pages.scss */
+/* line 146, ../sass/pages.scss */
 #menu-tab {
   text-align: center;
 }
-/* line 148, ../sass/pages.scss */
+/* line 149, ../sass/pages.scss */
 #menu-tab li {
   list-style: none outside none;
   display: inline;
@@ -177,32 +178,32 @@ body {
   padding: 0.2em 0.8em;
   background: #e9e9e9;
 }
-/* line 156, ../sass/pages.scss */
+/* line 157, ../sass/pages.scss */
 #menu-tab li:hover {
   background: #a6ddda;
 }
-/* line 160, ../sass/pages.scss */
+/* line 161, ../sass/pages.scss */
 #menu-tab li.active-trail {
   background: lightgrey;
 }
-/* line 164, ../sass/pages.scss */
+/* line 165, ../sass/pages.scss */
 #menu-tab a:hover {
   text-decoration: none;
 }
 
-/* line 169, ../sass/pages.scss */
+/* line 170, ../sass/pages.scss */
 #content h2.pane-title {
   text-align: center;
   font-size: large;
 }
-/* line 173, ../sass/pages.scss */
+/* line 174, ../sass/pages.scss */
 #content h2.pane-title a {
   background-color: #66bab7;
   color: #fafafa;
   padding: 0.2em 1em;
   border-radius: 1em;
 }
-/* line 179, ../sass/pages.scss */
+/* line 180, ../sass/pages.scss */
 #content h2.pane-title a:hover, #content h2.pane-title a:active {
   background-color: #5c8b8a;
   text-decoration: none;
@@ -211,7 +212,7 @@ body {
 /**
  * Highlighted
  */
-/* line 190, ../sass/pages.scss */
+/* line 191, ../sass/pages.scss */
 #highlighted h3 {
   text-align: center;
   padding-top: 0.65em;
@@ -224,17 +225,17 @@ body {
   border-bottom: solid #d0d0d0 1px;
   border-radius: 0 0 4px 4px;
 }
-/* line 202, ../sass/pages.scss */
+/* line 203, ../sass/pages.scss */
 #highlighted .field-image img {
   border-top: solid #d0d0d0 1px;
   border-radius: 4px 4px 0 0;
 }
-/* line 206, ../sass/pages.scss */
+/* line 207, ../sass/pages.scss */
 #highlighted .flex-control-nav {
   position: absolute;
   top: 83%;
 }
-/* line 210, ../sass/pages.scss */
+/* line 211, ../sass/pages.scss */
 #highlighted .flex-direction-nav a {
   top: 46.2%;
 }
@@ -242,75 +243,75 @@ body {
 /**
  * Content
  */
-/* line 221, ../sass/pages.scss */
+/* line 222, ../sass/pages.scss */
 #content .views-row, #content .flexslider {
   padding-top: 0.9em;
   padding-bottom: 0.9em;
 }
-/* line 226, ../sass/pages.scss */
+/* line 227, ../sass/pages.scss */
 #content .views-field {
   background-color: #fcfcfc;
   border-left: solid #d0d0d0 1px;
   border-right: solid #d0d0d0 1px;
   width: 100%;
 }
-/* line 232, ../sass/pages.scss */
+/* line 233, ../sass/pages.scss */
 #content .views-field h3, #content .views-field p {
   margin: 0;
 }
-/* line 235, ../sass/pages.scss */
+/* line 236, ../sass/pages.scss */
 #content .views-field h3 {
   font-size: 1em;
   padding: 0.4em 1.33em 0;
   text-align: center;
 }
-/* line 240, ../sass/pages.scss */
+/* line 241, ../sass/pages.scss */
 #content .views-field p {
   padding: 0.2em 1.33em;
 }
-/* line 246, ../sass/pages.scss */
+/* line 247, ../sass/pages.scss */
 #content .views-field-field-image img {
   display: block;
 }
-/* line 251, ../sass/pages.scss */
+/* line 252, ../sass/pages.scss */
 #content .views-field-title {
   overflow-y: hidden;
   height: 3.1em;
   display: table;
 }
-/* line 256, ../sass/pages.scss */
+/* line 257, ../sass/pages.scss */
 #content .views-field-title h3 {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 262, ../sass/pages.scss */
+/* line 263, ../sass/pages.scss */
 #content .views-field-body {
   overflow-y: hidden;
   height: 112px;
 }
-/* line 267, ../sass/pages.scss */
+/* line 268, ../sass/pages.scss */
 #content .views-field:first-child, #content .views-field:first-child img {
   border-top: solid #d0d0d0 1px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 273, ../sass/pages.scss */
+/* line 274, ../sass/pages.scss */
 #content .views-field:last-child {
   border-bottom: solid #d0d0d0 1px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-/* line 279, ../sass/pages.scss */
+/* line 280, ../sass/pages.scss */
 #content .flex-direction-nav a {
   top: 35%;
 }
-/* line 283, ../sass/pages.scss */
+/* line 284, ../sass/pages.scss */
 #content .flex-control-nav {
   position: absolute;
   top: 190px;
 }
 
-/* line 292, ../sass/pages.scss */
+/* line 293, ../sass/pages.scss */
 body.page-node #content .panel-col-first .inside {
   background-color: #fcfcfc;
   padding: 1.7em;
@@ -318,12 +319,12 @@ body.page-node #content .panel-col-first .inside {
   border-radius: 4px;
 }
 
-/* line 301, ../sass/pages.scss */
+/* line 302, ../sass/pages.scss */
 .region-highlighted .block:last-child {
   margin-bottom: 0px;
 }
 
-/* line 307, ../sass/pages.scss */
+/* line 308, ../sass/pages.scss */
 .flexslider {
   margin: 0;
   border-radius: 0;
@@ -332,16 +333,16 @@ body.page-node #content .panel-col-first .inside {
   box-shadow: none;
 }
 
-/* line 315, ../sass/pages.scss */
+/* line 316, ../sass/pages.scss */
 .breadcrumb {
   /* The path to the current page in the form of a list of links */
 }
-/* line 316, ../sass/pages.scss */
+/* line 317, ../sass/pages.scss */
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 320, ../sass/pages.scss */
+/* line 321, ../sass/pages.scss */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -349,14 +350,14 @@ body.page-node #content .panel-col-first .inside {
   padding: 0;
 }
 
-/* line 328, ../sass/pages.scss */
+/* line 329, ../sass/pages.scss */
 h1.title {
   /* The title of the page */
   margin: 0.23em 0;
   text-align: center;
 }
 
-/* line 335, ../sass/pages.scss */
+/* line 336, ../sass/pages.scss */
 h2.node-title,
 h2.block-title,
 h2.pane-title {
@@ -364,7 +365,7 @@ h2.pane-title {
   margin: 0.07em 0;
 }
 
-/* line 341, ../sass/pages.scss */
+/* line 342, ../sass/pages.scss */
 h2.title,
 h2.comment-form,
 h3.title {
@@ -372,37 +373,37 @@ h3.title {
   margin: 0;
 }
 
-/* line 345, ../sass/pages.scss */
+/* line 346, ../sass/pages.scss */
 tr.even {
   /* Some tables have rows marked even or odd. */
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 349, ../sass/pages.scss */
+/* line 350, ../sass/pages.scss */
 tr.odd {
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 353, ../sass/pages.scss */
+/* line 354, ../sass/pages.scss */
 div.messages {
   /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 1.5em 0;
   /* Drupal core uses "6px 0" margin */
 }
-/* line 356, ../sass/pages.scss */
+/* line 357, ../sass/pages.scss */
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 362, ../sass/pages.scss */
+/* line 363, ../sass/pages.scss */
 div.status {
   /* Normal priority messages */
 }
 
-/* line 366, ../sass/pages.scss */
+/* line 367, ../sass/pages.scss */
 div.warning,
 tr.warning {
   /* Medium priority messages */
@@ -410,82 +411,82 @@ tr.warning {
   /* Drupal core uses: 1px solid #f0c020 */
 }
 
-/* line 371, ../sass/pages.scss */
+/* line 372, ../sass/pages.scss */
 div.error,
 tr.error {
   /* High priority messages. See also the .error declaration below. */
 }
 
-/* line 374, ../sass/pages.scss */
+/* line 375, ../sass/pages.scss */
 .error {
   /* Errors that are separate from div.messages status messages. */
   /* color: #e55; */
   /* Drupal core uses a #e55 background */
 }
 
-/* line 378, ../sass/pages.scss */
+/* line 379, ../sass/pages.scss */
 .warning {
   /* Warnings that are separate from div.messages status messages. */
   /* color: #e09010; */
   /* Drupal core uses a #e09010 background */
 }
 
-/* line 382, ../sass/pages.scss */
+/* line 383, ../sass/pages.scss */
 .tabs {
   /* See also the tabs.css file. */
 }
 
-/* line 385, ../sass/pages.scss */
+/* line 386, ../sass/pages.scss */
 .region-help {
   /* Help text on a page */
 }
 
-/* line 388, ../sass/pages.scss */
+/* line 389, ../sass/pages.scss */
 .more-help-link {
   /* Link to more help */
 }
 
-/* line 391, ../sass/pages.scss */
+/* line 392, ../sass/pages.scss */
 .region-content {
   /* Wrapper for the actual page content */
 }
 
-/* line 394, ../sass/pages.scss */
+/* line 395, ../sass/pages.scss */
 ul.inline {
   /* List of links generated by theme_links() */
   display: inline;
   padding: 0;
 }
-/* line 398, ../sass/pages.scss */
+/* line 399, ../sass/pages.scss */
 ul.inline li {
   display: inline;
   list-style-type: none;
 }
 
-/* line 403, ../sass/pages.scss */
+/* line 404, ../sass/pages.scss */
 span.field-label {
   /* The inline field label used by the Fences module */
   padding: 0 1em 0 0;
   /* LTR */
 }
 
-/* line 407, ../sass/pages.scss */
+/* line 408, ../sass/pages.scss */
 .item-list .pager {
   /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
 }
-/* line 410, ../sass/pages.scss */
+/* line 411, ../sass/pages.scss */
 .item-list .pager li {
   /* Each page number in the pager list */
   padding: 0 0.5em;
 }
 
-/* line 415, ../sass/pages.scss */
+/* line 416, ../sass/pages.scss */
 .feed-icon {
   /* The link to the RSS or Atom feed for the current list of content */
 }
 
-/* line 418, ../sass/pages.scss */
+/* line 419, ../sass/pages.scss */
 .more-link {
   /* Aggregator, blog, and forum more link */
 }
@@ -505,7 +506,7 @@ span.field-label {
 /*
  * Footer
  */
-/* line 448, ../sass/pages.scss */
+/* line 449, ../sass/pages.scss */
 #footer-left-right {
   padding: 7px 0;
 }
@@ -513,7 +514,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 456, ../sass/pages.scss */
+/* line 457, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
