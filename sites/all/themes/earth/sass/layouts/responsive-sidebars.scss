@@ -129,10 +129,24 @@ $zen-auto-include-flow-item-base: true;
 
   .region-header {
     @include zen-grid-item(3, 1, right);
+
+    ul.menu {
+      margin-top: 0;
+      margin-bottom: 0;
+      li {
+        list-style: none;
+        font-size: small;
+      }
+    }
+    .block {
+      margin-bottom: 0;
+    }
+    position: relative;
+    top: -19px;
   }
 
   .region-navigation {
-    @include zen-grid-item(10, 2);
+    @include zen-grid-item(12, 1);
   }
 
   .region-highlighted {
