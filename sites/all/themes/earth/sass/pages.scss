@@ -56,7 +56,7 @@ body {
 
 #highlighted-wrapper {
   padding: 1em 0px;
-  border-bottom: solid 3px #eee;
+  border-bottom: solid 3px $shade-separator;
 }
 
 #highlighted-wrapper,
@@ -455,4 +455,24 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
+}
+
+#earthday-donate,
+#earthday-event,
+#earthday-shop {
+  h2.pane-title {
+    line-height: 1.8em;
+    border-bottom: 1px solid $thin-line;
+    color: $color-main; 
+  }
+}
+
+#earthday-newsroom {
+  h2.pane-title {
+    line-height: 1.8em;
+    background-color: $color-main;
+    color: $main-background;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

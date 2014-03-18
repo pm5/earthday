@@ -1,0 +1,12 @@
+name = Earthday Frontpage
+description = 地球日首頁
+core = 7.x
+package = Earthday TW
+php = 5.2.4
+version = 7.x-1.0-beta1
+project = earthday_frontpage
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:1
+features[page_manager_pages][] = home

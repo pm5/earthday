@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Earthday Frontpage feature.
+ */
+
+include_once 'earthday_frontpage.features.inc';

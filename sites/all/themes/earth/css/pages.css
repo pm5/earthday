@@ -56,7 +56,7 @@ body {
 /* line 57, ../sass/pages.scss */
 #highlighted-wrapper {
   padding: 1em 0px;
-  border-bottom: solid 3px #eee;
+  border-bottom: solid 3px #eeeeee;
 }
 
 /* line 63, ../sass/pages.scss */
@@ -517,4 +517,22 @@ span.field-label {
 /* line 457, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
+}
+
+/* line 463, ../sass/pages.scss */
+#earthday-donate h2.pane-title,
+#earthday-event h2.pane-title,
+#earthday-shop h2.pane-title {
+  line-height: 1.8em;
+  border-bottom: 1px solid #d0d0d0;
+  color: #66bab7;
+}
+
+/* line 471, ../sass/pages.scss */
+#earthday-newsroom h2.pane-title {
+  line-height: 1.8em;
+  background-color: #66bab7;
+  color: #f0f8f5;
+  margin-left: 10px;
+  margin-right: 10px;
 }
