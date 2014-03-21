@@ -92,7 +92,10 @@
         </hgroup><!-- /#name-and-slogan -->
       <?php endif; ?>
 
-      <div id="links"><a href="https://www.facebook.com/EarthDayTW"><img src="/sites/all/themes/earth/images/fb.png" alt="台灣地球日粉絲團" title="台灣地球日粉絲團"/></a><a href="http://www.e-info.org.tw/"><img src="/sites/all/themes/earth/images/teia.png" alt="台灣環境資訊協會" title="台灣環境資訊協會"/></a><a href="https://e-info.neticrm.tw/civicrm/profile/create?gid=56&amp;reset=1"><img src="/sites/all/themes/earth/images/epaper.png" alt="地球日電子報" title="地球日電子報"/></a></div>
+      <div id="links">
+        <a href="https://www.facebook.com/EarthDayTW" target="_blank"><img src="/sites/all/themes/earth/images/fb.png" alt="台灣地球日粉絲團" title="台灣地球日粉絲團"/></a>
+        <a href="http://www.e-info.org.tw/" target="_blank"><img src="/sites/all/themes/earth/images/teia.png" alt="台灣環境資訊協會" title="台灣環境資訊協會"/></a>
+        <a href="https://e-info.neticrm.tw/civicrm/profile/create?gid=56&amp;reset=1" target="_blank"><img src="/sites/all/themes/earth/images/epaper.png" alt="地球日電子報" title="地球日電子報"/></a></div>
 
       <?php print render($page['header']); ?>
 

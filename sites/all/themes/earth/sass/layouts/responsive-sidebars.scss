@@ -104,6 +104,10 @@ $zen-auto-include-flow-item-base: true;
   $zen-column-count: 12;
   @include with-grid-background;
 
+  #header {
+    height: 86px;
+  }
+
   #logo {
     @include zen-grid-item(1, 1);
     img {
@@ -128,7 +132,11 @@ $zen-auto-include-flow-item-base: true;
   }
 
   #links {
-    @include zen-grid-item(3, 2, right);
+    @include zen-grid-item(3, 1, right);
+    a {
+      float: left;
+      margin-right: 5px;
+    }
   }
 
   .region-header {
