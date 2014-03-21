@@ -104,6 +104,10 @@ $zen-auto-include-flow-item-base: true;
   $zen-column-count: 12;
   @include with-grid-background;
 
+  #header {
+    height: 86px;
+  }
+
   #logo {
     @include zen-grid-item(1, 1);
     img {
@@ -127,12 +131,34 @@ $zen-auto-include-flow-item-base: true;
     }
   }
 
-  .region-header {
+  #links {
     @include zen-grid-item(3, 1, right);
+    a {
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  .region-header {
+    @include zen-grid-item(4, 1, right);
+
+    ul.menu {
+      margin-top: 0;
+      margin-bottom: 0;
+      li {
+        list-style: none;
+        font-size: small;
+      }
+    }
+    .block {
+      margin-bottom: 0;
+    }
+    position: relative;
+    top: -19px;
   }
 
   .region-navigation {
-    @include zen-grid-item(10, 2);
+    @include zen-grid-item(11, 2);
   }
 
   .region-highlighted {
