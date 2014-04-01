@@ -56,7 +56,6 @@ $zen-auto-include-flow-item-base: true;
 #main-wrapper,
 #footer-wrapper {
   @include zen-clear();
-  max-width: 1024px;
   min-width: 1024px;
 }
 
