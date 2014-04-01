@@ -47,6 +47,7 @@ $zen-auto-include-flow-item-base: true;
      by setting a max-width. */
   margin: 0 auto;
   max-width: 1024px;
+  min-width: 1024px;
 }
 
 #header-wrapper,
@@ -55,6 +56,8 @@ $zen-auto-include-flow-item-base: true;
 #main-wrapper,
 #footer-wrapper {
   @include zen-clear();
+  max-width: 1024px;
+  min-width: 1024px;
 }
 
 /*
@@ -85,6 +88,7 @@ $zen-auto-include-flow-item-base: true;
   @include zen-grid-container();
 }
 
+/*
 @media all and (max-width: 479px) {
   $zen-column-count: 1;
   @include with-grid-background;
@@ -101,6 +105,8 @@ $zen-auto-include-flow-item-base: true;
 }
 
 @media all and (min-width: 960px) {
+*/
+@media all {
   $zen-column-count: 12;
   @include with-grid-background;
 
