@@ -248,7 +248,7 @@ function earthday_join_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => '5167',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -279,7 +279,7 @@ function earthday_join_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => '736',
+        'default_image' => '4993',
         'file_directory' => 'images/earthday-join',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
