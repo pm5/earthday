@@ -47,6 +47,14 @@ function earthday_join_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = '最後一頁 »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* 無查詢結果的行為: 全域: 多行文字欄位 */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = '「活動準備中」訊息';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<p>今年度的地球日活動正在緊鑼密鼓籌備中，請密切注意！</p>';
+  $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
   /* 欄位: 欄位: 圖片 */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -91,11 +99,10 @@ function earthday_join_views_default_views() {
   $handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
   $handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
   $handler->display->display_options['sorts']['field_weight_value']['field'] = 'field_weight_value';
-  /* Sort criterion: 內容: 發表日期 */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: 內容: 開始結束時間 - end date (field_start_at:value2) */
+  $handler->display->display_options['sorts']['field_start_at_value2']['id'] = 'field_start_at_value2';
+  $handler->display->display_options['sorts']['field_start_at_value2']['table'] = 'field_data_field_start_at';
+  $handler->display->display_options['sorts']['field_start_at_value2']['field'] = 'field_start_at_value2';
   /* Filter criterion: 內容: 已發表 */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -110,14 +117,62 @@ function earthday_join_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'earthday_join' => 'earthday_join',
   );
+  /* Filter criterion: 內容: 開始結束時間 - end date (field_start_at:value2) */
+  $handler->display->display_options['filters']['field_start_at_value2']['id'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['table'] = 'field_data_field_start_at';
+  $handler->display->display_options['filters']['field_start_at_value2']['field'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_start_at_value2']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_start_at_value2']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['field_start_at_value2']['default_date'] = 'this year';
 
   /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '活動快遞';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'grid-3-col';
   $handler->display->display_options['path'] = 'event';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = '地球日活動';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Page: 活動回顧 */
+  $handler = $view->new_display('page', 'Page: 活動回顧', 'archive_page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '活動回顧';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'grid-3-col';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: 內容: 已發表 */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: 內容: 類型 */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'earthday_join' => 'earthday_join',
+  );
+  /* Filter criterion: 內容: 開始結束時間 - end date (field_start_at:value2) */
+  $handler->display->display_options['filters']['field_start_at_value2']['id'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['table'] = 'field_data_field_start_at';
+  $handler->display->display_options['filters']['field_start_at_value2']['field'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['operator'] = '<';
+  $handler->display->display_options['filters']['field_start_at_value2']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_start_at_value2']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['field_start_at_value2']['default_date'] = 'this year';
+  $handler->display->display_options['path'] = 'event/archive';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = '活動回顧';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
@@ -246,8 +301,13 @@ function earthday_join_views_default_views() {
     t('‹ 上一頁'),
     t('下一頁 ›'),
     t('最後一頁 »'),
+    t('「活動準備中」訊息'),
+    t('<p>今年度的地球日活動正在緊鑼密鼓籌備中，請密切注意！</p>'),
     t('[body]⋯⋯'),
     t('Page'),
+    t('活動快遞'),
+    t('Page: 活動回顧'),
+    t('活動回顧'),
     t('Content pane: 輪播'),
     t('首頁推薦'),
     t('Earthday TW'),
