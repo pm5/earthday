@@ -115,7 +115,7 @@ function earthday_join_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'grid-3-col';
-  $handler->display->display_options['path'] = 'join';
+  $handler->display->display_options['path'] = 'event';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = '地球日活動';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -125,7 +125,6 @@ function earthday_join_views_default_views() {
 
   /* Display: Content pane: 輪播 */
   $handler = $view->new_display('panel_pane', 'Content pane: 輪播', 'slideshow_pane');
-  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
