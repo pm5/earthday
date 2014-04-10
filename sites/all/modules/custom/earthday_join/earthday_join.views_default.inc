@@ -147,6 +147,12 @@ function earthday_join_views_default_views() {
   $handler->display->display_options['title'] = '活動回顧';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'grid-3-col';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: 內容: 開始結束時間 - end date (field_start_at:value2) */
+  $handler->display->display_options['sorts']['field_start_at_value2']['id'] = 'field_start_at_value2';
+  $handler->display->display_options['sorts']['field_start_at_value2']['table'] = 'field_data_field_start_at';
+  $handler->display->display_options['sorts']['field_start_at_value2']['field'] = 'field_start_at_value2';
+  $handler->display->display_options['sorts']['field_start_at_value2']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: 內容: 已發表 */
