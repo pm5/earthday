@@ -103,6 +103,7 @@ function earthday_join_views_default_views() {
   $handler->display->display_options['sorts']['field_start_at_value2']['id'] = 'field_start_at_value2';
   $handler->display->display_options['sorts']['field_start_at_value2']['table'] = 'field_data_field_start_at';
   $handler->display->display_options['sorts']['field_start_at_value2']['field'] = 'field_start_at_value2';
+  $handler->display->display_options['sorts']['field_start_at_value2']['order'] = 'DESC';
   /* Filter criterion: 內容: 已發表 */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
