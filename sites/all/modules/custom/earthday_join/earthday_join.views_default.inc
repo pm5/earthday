@@ -207,23 +207,19 @@ function earthday_join_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'earthday_join' => 'earthday_join',
   );
+  /* Filter criterion: 內容: 開始結束時間 - end date (field_start_at:value2) */
+  $handler->display->display_options['filters']['field_start_at_value2']['id'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['table'] = 'field_data_field_start_at';
+  $handler->display->display_options['filters']['field_start_at_value2']['field'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_start_at_value2']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_start_at_value2']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['field_start_at_value2']['default_date'] = 'this year';
   /* Filter criterion: 內容: 首頁推薦 */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = 'All';
-  $handler->display->display_options['filters']['promote']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['promote']['expose']['label'] = '首頁推薦';
-  $handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
-  $handler->display->display_options['filters']['promote']['expose']['identifier'] = 'promote';
-  $handler->display->display_options['filters']['promote']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
+  $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['pane_category']['name'] = 'Earthday TW';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -310,7 +306,6 @@ function earthday_join_views_default_views() {
     t('Page: 活動回顧'),
     t('活動回顧'),
     t('Content pane: 輪播'),
-    t('首頁推薦'),
     t('Earthday TW'),
     t('Content pane: 相關內容'),
     t('所有'),
