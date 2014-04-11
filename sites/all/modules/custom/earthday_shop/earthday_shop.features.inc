@@ -27,7 +27,7 @@ function earthday_shop_views_api() {
 function earthday_shop_node_info() {
   $items = array(
     'earthday_shop' => array(
-      'name' => t('地球日好康'),
+      'name' => t('好康情報站'),
       'base' => 'node_content',
       'description' => t('各單位廠商提供的優惠活動。會在首頁輪播，並且在「地球日好康」頁全部列出。'),
       'has_title' => '1',
