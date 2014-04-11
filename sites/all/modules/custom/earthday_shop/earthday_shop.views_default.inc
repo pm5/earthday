@@ -12,17 +12,17 @@ function earthday_shop_views_default_views() {
 
   $view = new view();
   $view->name = 'earthday_shop';
-  $view->description = '「地球日好康」類型的內容頁面與 content pane.';
+  $view->description = '「好康情報站」類型的內容頁面與 content pane.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = '地球日好康';
+  $view->human_name = '好康情報站';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = '地球日好康';
+  $handler->display->display_options['title'] = '好康情報站';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = '更多';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -122,7 +122,6 @@ function earthday_shop_views_default_views() {
 
   /* Display: Content pane: 輪播 */
   $handler = $view->new_display('panel_pane', 'Content pane: 輪播', 'slideshow_pane');
-  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -152,8 +151,7 @@ function earthday_shop_views_default_views() {
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = 'All';
-  $handler->display->display_options['filters']['promote']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['promote']['expose']['label'] = '首頁推薦';
   $handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
@@ -165,6 +163,12 @@ function earthday_shop_views_default_views() {
     4 => 0,
     5 => 0,
   );
+  /* Filter criterion: 內容: 開始結束時間 - end date (field_start_at:value2) */
+  $handler->display->display_options['filters']['field_start_at_value2']['id'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['table'] = 'field_data_field_start_at';
+  $handler->display->display_options['filters']['field_start_at_value2']['field'] = 'field_start_at_value2';
+  $handler->display->display_options['filters']['field_start_at_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_start_at_value2']['default_date'] = 'today';
   $handler->display->display_options['pane_category']['name'] = 'Earthday TW';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -230,7 +234,7 @@ function earthday_shop_views_default_views() {
   $handler->display->display_options['inherit_panels_path'] = '0';
   $translatables['earthday_shop'] = array(
     t('Master'),
-    t('地球日好康'),
+    t('好康情報站'),
     t('更多'),
     t('套用'),
     t('重設'),
