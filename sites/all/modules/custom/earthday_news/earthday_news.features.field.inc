@@ -179,7 +179,7 @@ function earthday_news_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => '5167',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -210,7 +210,7 @@ function earthday_news_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => '735',
+        'default_image' => 0,
         'file_directory' => 'images/earthday-news',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -221,12 +221,29 @@ function earthday_news_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'media',
         'settings' => array(
-          'preview_image_style' => 'earthday-title',
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 'image',
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+            'youtube' => 0,
+          ),
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'image_image',
+        'type' => 'media_generic',
         'weight' => '2',
       ),
     ),
