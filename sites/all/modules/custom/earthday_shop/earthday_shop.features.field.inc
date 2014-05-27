@@ -248,7 +248,7 @@ function earthday_shop_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => '5167',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -279,7 +279,7 @@ function earthday_shop_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => '734',
+        'default_image' => '4995',
         'file_directory' => 'images/earthday-shop',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -290,12 +290,20 @@ function earthday_shop_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'media',
         'settings' => array(
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
           'preview_image_style' => 'earthday-title',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'image_image',
+        'type' => 'media_generic',
         'weight' => '1',
       ),
     ),

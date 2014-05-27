@@ -15,7 +15,7 @@ function earthday_shop_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => 'shop',
     'router_path' => 'shop',
-    'link_title' => '地球日好康',
+    'link_title' => '好康情報站',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -34,7 +34,7 @@ function earthday_shop_menu_default_menu_links() {
     'menu_name' => 'navigation',
     'link_path' => 'node/add/earthday-shop',
     'router_path' => 'node/add/earthday-shop',
-    'link_title' => '地球日好康',
+    'link_title' => '好康情報站',
     'options' => array(
       'attributes' => array(
         'title' => '各單位廠商提供的優惠活動。會在首頁輪播，並且在「地球日好康」頁全部列出。',
@@ -50,7 +50,7 @@ function earthday_shop_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('地球日好康');
+  t('好康情報站');
 
 
   return $menu_links;

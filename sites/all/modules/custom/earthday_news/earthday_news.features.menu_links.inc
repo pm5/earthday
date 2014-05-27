@@ -15,7 +15,7 @@ function earthday_news_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => 'menu-position/11',
     'router_path' => 'menu-position/%',
-    'link_title' => '分類: 地球日新聞: 活動報導 (menu position rule)',
+    'link_title' => '分類: 世界新聞台: 活動報導 (menu position rule)',
     'options' => array(
       'alter' => TRUE,
       'attributes' => array(
@@ -37,7 +37,7 @@ function earthday_news_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => 'menu-position/5',
     'router_path' => 'menu-position/%',
-    'link_title' => '分類: 地球日新聞: 新聞 (menu position rule)',
+    'link_title' => '分類: 世界新聞台: 台灣 (menu position rule)',
     'options' => array(
       'alter' => TRUE,
       'attributes' => array(
@@ -51,7 +51,7 @@ function earthday_news_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-49',
     'parent_path' => 'taxonomy/term/34',
   );
   // Exported menu link: main-menu:taxonomy/term/34
@@ -59,7 +59,7 @@ function earthday_news_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => 'taxonomy/term/34',
     'router_path' => 'taxonomy/term/%',
-    'link_title' => '新聞',
+    'link_title' => '台灣',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -91,7 +91,7 @@ function earthday_news_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-47',
     'parent_path' => 'taxonomy/term/3',
   );
   // Exported menu link: main-menu:taxonomy/term/37
@@ -118,7 +118,7 @@ function earthday_news_menu_default_menu_links() {
     'menu_name' => 'navigation',
     'link_path' => 'node/add/earthday-news',
     'router_path' => 'node/add/earthday-news',
-    'link_title' => '地球日新聞',
+    'link_title' => '世界新聞台',
     'options' => array(
       'attributes' => array(
         'title' => '持續更新的內容，包括「新聞」、「專欄」、「活動報導」。會在首頁露出更新內容，並在「地球新聞台」全部列出。',
@@ -134,10 +134,10 @@ function earthday_news_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('分類: 地球日新聞: 新聞 (menu position rule)');
-  t('分類: 地球日新聞: 活動報導 (menu position rule)');
-  t('地球日新聞');
-  t('新聞');
+  t('世界新聞台');
+  t('分類: 世界新聞台: 台灣 (menu position rule)');
+  t('分類: 世界新聞台: 活動報導 (menu position rule)');
+  t('台灣');
   t('活動報導');
   t('活動相簿');
 

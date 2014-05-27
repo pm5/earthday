@@ -19,7 +19,7 @@ function earthday_news_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -28;
   $handler->conf = array(
-    'title' => 'Panels: 地球新聞台',
+    'title' => 'Panels: 世界新聞台',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
@@ -34,14 +34,16 @@ function earthday_news_default_page_manager_handlers() {
           'name' => 'term',
           'settings' => array(
             'vid' => '2',
-            1 => array(),
+            4 => array(),
             2 => array(
               3 => '3',
               34 => '34',
+              53 => '53',
               35 => '35',
-              36 => '36',
               37 => '37',
             ),
+            3 => array(),
+            5 => array(),
           ),
           'context' => 'argument_term_1',
           'not' => FALSE,
@@ -60,7 +62,7 @@ function earthday_news_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '地球新聞台';
+  $display->title = '%term:name';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
