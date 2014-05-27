@@ -524,7 +524,7 @@ span.field-label {
 }
 
 /* line 470, ../sass/pages.scss */
-#earthday-newsroom h2.pane-title {
+.wide-column h2.pane-title {
   line-height: 1.8em;
   background-color: #66bab7;
   color: #f0f8f5;
