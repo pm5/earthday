@@ -19,7 +19,7 @@ function earthday_column_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -28;
   $handler->conf = array(
-    'title' => 'Panels: 地球日專欄',
+    'title' => 'Panels: 積綠專欄',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
@@ -130,7 +130,7 @@ function earthday_column_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -30;
   $handler->conf = array(
-    'title' => 'Panels: 地球日專欄',
+    'title' => 'Panels: 積綠專欄',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
@@ -244,7 +244,7 @@ function earthday_column_default_page_manager_pages() {
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
-    'title' => '地球日專欄',
+    'title' => '積綠專欄',
     'name' => 'main-menu',
     'weight' => '0',
     'parent' => array(
@@ -291,7 +291,7 @@ function earthday_column_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '地球日專欄';
+  $display->title = '積綠專欄';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

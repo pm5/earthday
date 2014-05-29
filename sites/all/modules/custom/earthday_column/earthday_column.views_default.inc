@@ -15,14 +15,15 @@ function earthday_column_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = '地球日專欄';
+  $view->human_name = '積綠專欄';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = '地球日專欄';
+  $handler->display->display_options['title'] = '積綠專欄';
+  $handler->display->display_options['css_class'] = 'grid-4-col clearfix';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = '更多';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -82,6 +83,11 @@ function earthday_column_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '60',
   );
+  /* Sort criterion: 內容: 置頂 */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
   /* Sort criterion: 內容: 排序 (field_weight) */
   $handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
   $handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
@@ -171,9 +177,27 @@ function earthday_column_views_default_views() {
     ),
   );
   $handler->display->display_options['link_to_view'] = '1';
+
+  /* Display: Content pane: 四格 */
+  $handler = $view->new_display('panel_pane', 'Content pane: 四格', '4_stories_pane');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pane_category']['name'] = 'Earthday TW';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 'link_to_view';
+  $handler->display->display_options['allow']['more_link'] = 'more_link';
+  $handler->display->display_options['allow']['path_override'] = 'path_override';
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $translatables['earthday_column'] = array(
     t('Master'),
-    t('地球日專欄'),
+    t('積綠專欄'),
     t('更多'),
     t('套用'),
     t('重設'),
@@ -193,6 +217,7 @@ function earthday_column_views_default_views() {
     t('Earthday TW'),
     t('Content pane: 相關內容'),
     t('所有'),
+    t('Content pane: 四格'),
   );
   $export['earthday_column'] = $view;
 
@@ -201,14 +226,14 @@ function earthday_column_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
-  $view->human_name = '過往專欄';
+  $view->human_name = '專欄目錄';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = '過往專欄';
+  $handler->display->display_options['title'] = '專欄目錄';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = '更多';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -250,11 +275,14 @@ function earthday_column_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'column/archive';
   $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = '過往專欄';
+  $handler->display->display_options['menu']['title'] = '專欄目錄';
+  $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['earthday_column_archive'] = array(
     t('Master'),
-    t('過往專欄'),
+    t('專欄目錄'),
     t('更多'),
     t('套用'),
     t('重設'),
