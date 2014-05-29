@@ -121,11 +121,11 @@ function earthday_join_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'file',
+          'label' => 'hidden',
+          'module' => 'gdoc_field',
           'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 8,
+          'type' => 'gdoc_field_embedded_doc',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -679,7 +679,7 @@ function earthday_join_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
