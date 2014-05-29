@@ -18,6 +18,7 @@ features[ctools][] = page_manager:pages_default:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[field][] = node-earthday_shop-body
+features[field][] = node-earthday_shop-field_attached_document
 features[field][] = node-earthday_shop-field_contact
 features[field][] = node-earthday_shop-field_holder
 features[field][] = node-earthday_shop-field_image
