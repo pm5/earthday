@@ -218,6 +218,16 @@ body {
 
 #content {
 
+  article {
+    h3 {
+      color: $color-darkest;
+      font-size: 1.66em;
+    }
+    p {
+      line-height: 1.63em;
+    }
+  }
+
   .views-row, .flexslider {
     padding-top: 0.9em;
     padding-bottom: 0.9em;
