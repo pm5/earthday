@@ -121,11 +121,11 @@ function earthday_page_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'file',
+          'label' => 'hidden',
+          'module' => 'gdoc_field',
           'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 5,
+          'type' => 'gdoc_field_embedded_doc',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -434,7 +434,7 @@ function earthday_page_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
