@@ -1,103 +1,542 @@
+@charset "UTF-8";
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
 /*
-Syntax error: Undefined variable: "$color-darkest".
-        on line 223 of /Users/pm5/src/einfo/earthday/web/sites/all/themes/earth/sass/pages.scss
+ * Colors
+ */
+/*
+ * Body
+ */
+/* line 16, ../sass/pages.scss */
+body {
+  margin: 0;
+  padding: 0;
+  /*font-family: "微軟正黑體", "儷黑 Pro", "新細明體", sans-serif;*/
+  font-family: "Helvetica Neue", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Arial", sans-serif;
+}
 
-Backtrace:
-/Users/pm5/src/einfo/earthday/web/sites/all/themes/earth/sass/pages.scss:223
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/script/variable.rb:49:in `_perform'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/script/node.rb:40:in `perform'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:139:in `block (2 levels) in compile'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:126:in `timed'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:138:in `block in compile'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/logger.rb:45:in `red'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:137:in `compile'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:118:in `compile_if_required'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:101:in `each'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:101:in `block in run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:126:in `timed'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/compiler.rb:100:in `run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/commands/watch_project.rb:147:in `recompile'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:30:in `block in temporary_multipath_handler'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `each'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:17:in `block (2 levels) in run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `each'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `block in run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/rb-fsevent-0.9.4/lib/rb-fsevent/fsevent.rb:45:in `call'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/rb-fsevent-0.9.4/lib/rb-fsevent/fsevent.rb:45:in `run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:20:in `run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/commands/watch_project.rb:87:in `perform'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/commands/base.rb:18:in `execute'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/bin/compass:30:in `block in <top (required)>'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/bin/compass:44:in `call'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/gems/compass-0.12.6/bin/compass:44:in `<top (required)>'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/bin/compass:23:in `load'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/bin/compass:23:in `<main>'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
-/Users/pm5/.rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color-darkest\".\A         on line 223 of /Users/pm5/src/einfo/earthday/web/sites/all/themes/earth/sass/pages.scss"; }
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+/* line 31, ../sass/pages.scss */
+#skip-link {
+  margin: 0;
+}
+/* line 35, ../sass/pages.scss */
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+/* line 49, ../sass/pages.scss */
+#header-wrapper {
+  background-color: #66bab7;
+}
+
+/* line 53, ../sass/pages.scss */
+#navigation-wrapper {
+  background-color: #ffb11b;
+}
+
+/* line 57, ../sass/pages.scss */
+#highlighted-wrapper {
+  padding: 1em 0px;
+  border-bottom: solid 3px #eeeeee;
+}
+
+/* line 63, ../sass/pages.scss */
+#highlighted-wrapper,
+#highlighted {
+  /*background-color: $highlighted-background;*/
+}
+
+/* line 68, ../sass/pages.scss */
+#header-wrapper,
+#navigation-wrapper {
+  color: #fafafa;
+}
+/* line 71, ../sass/pages.scss */
+#header-wrapper a:link,
+#header-wrapper a:visited,
+#navigation-wrapper a:link,
+#navigation-wrapper a:visited {
+  color: #fafafa;
+  text-decoration: none;
+}
+/* line 76, ../sass/pages.scss */
+#header-wrapper a:hover,
+#header-wrapper a:focus,
+#navigation-wrapper a:hover,
+#navigation-wrapper a:focus {
+  text-decoration: underline;
+}
+
+/* line 82, ../sass/pages.scss */
+#main-wrapper,
+#highlighted-wrapper {
+  background-color: #f0f8f5;
+  color: #3e3e3e;
+}
+/* line 87, ../sass/pages.scss */
+#main-wrapper a:link,
+#main-wrapper a:visited,
+#highlighted-wrapper a:link,
+#highlighted-wrapper a:visited {
+  color: #3e3e3e;
+  text-decoration: none;
+}
+/* line 93, ../sass/pages.scss */
+#main-wrapper a:hover,
+#main-wrapper a:focus,
+#highlighted-wrapper a:hover,
+#highlighted-wrapper a:focus {
+  text-decoration: underline;
+}
+
+/* line 98, ../sass/pages.scss */
+#footer-wrapper {
+  background-color: #66bab7;
+  color: #fafafa;
+}
+/* line 103, ../sass/pages.scss */
+#footer-wrapper a:link,
+#footer-wrapper a:visited {
+  color: #fafafa;
+  text-decoration: none;
+}
+/* line 109, ../sass/pages.scss */
+#footer-wrapper a:hover,
+#footer-wrapper a:focus {
+  text-decoration: underline;
+}
+
+/* line 114, ../sass/pages.scss */
+#logo {
+  /* Wrapping link for logo */
+}
+
+/* line 117, ../sass/pages.scss */
+#name-and-slogan {
+  /* Wrapper for website name and slogan */
+}
+
+/* line 120, ../sass/pages.scss */
+#site-name {
+  /* The name of the website */
+  margin: 0;
+  font-size: 1em;
+}
+
+/* line 125, ../sass/pages.scss */
+#site-slogan {
+  /* The slogan (or tagline) of a website */
+  margin: 0;
+  line-height: 1.5em;
+  font-size: 2em;
+}
+
+/*
+ * Main (container for everything else)
+ */
+/* line 138, ../sass/pages.scss */
+#main {
+  padding: 7px 0;
+}
+
+/*
+ * Navigation
+ */
+/* line 145, ../sass/pages.scss */
+#menu-tab {
+  text-align: center;
+}
+/* line 148, ../sass/pages.scss */
+#menu-tab li {
+  list-style: none outside none;
+  display: inline;
+  border-radius: 0.8em;
+  padding: 0.2em 0.8em;
+  background: #e9e9e9;
+}
+/* line 156, ../sass/pages.scss */
+#menu-tab li:hover {
+  background: #a6ddda;
+}
+/* line 160, ../sass/pages.scss */
+#menu-tab li.active-trail {
+  background: lightgrey;
+}
+/* line 164, ../sass/pages.scss */
+#menu-tab a:hover {
+  text-decoration: none;
+}
+
+/* line 169, ../sass/pages.scss */
+#content h2.pane-title {
+  text-align: center;
+  font-size: large;
+}
+/* line 173, ../sass/pages.scss */
+#content h2.pane-title a {
+  background-color: #66bab7;
+  color: #fafafa;
+  padding: 0.2em 1em;
+  border-radius: 1em;
+}
+/* line 179, ../sass/pages.scss */
+#content h2.pane-title a:hover, #content h2.pane-title a:active {
+  background-color: #5c8b8a;
+  text-decoration: none;
+}
+
+/**
+ * Highlighted
+ */
+/* line 190, ../sass/pages.scss */
+#highlighted h3 {
+  text-align: center;
+  padding-top: 0.65em;
+  padding-bottom: 0.65em;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #fcfcfc;
+  border-right: solid #d0d0d0 1px;
+  border-left: solid #d0d0d0 1px;
+  border-bottom: solid #d0d0d0 1px;
+  border-radius: 0 0 4px 4px;
+}
+/* line 202, ../sass/pages.scss */
+#highlighted .field-image img {
+  border-top: solid #d0d0d0 1px;
+  border-radius: 4px 4px 0 0;
+}
+/* line 206, ../sass/pages.scss */
+#highlighted .flex-control-nav {
+  position: absolute;
+  top: 83%;
+}
+/* line 210, ../sass/pages.scss */
+#highlighted .flex-direction-nav a {
+  top: 46.2%;
+}
+
+/**
+ * Content
+ */
+/* line 222, ../sass/pages.scss */
+#content article h3 {
+  color: #217976;
+  font-size: 1.66em;
+}
+/* line 226, ../sass/pages.scss */
+#content article p {
+  line-height: 1.63em;
+}
+/* line 231, ../sass/pages.scss */
+#content .views-row, #content .flexslider {
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
+}
+/* line 236, ../sass/pages.scss */
+#content .views-field {
+  background-color: #fcfcfc;
+  border-left: solid #d0d0d0 1px;
+  border-right: solid #d0d0d0 1px;
+  width: 100%;
+}
+/* line 242, ../sass/pages.scss */
+#content .views-field h3, #content .views-field p {
+  margin: 0;
+}
+/* line 245, ../sass/pages.scss */
+#content .views-field h3 {
+  font-size: 1em;
+  padding: 0.4em 1.33em 0;
+  text-align: center;
+}
+/* line 250, ../sass/pages.scss */
+#content .views-field p {
+  padding: 0.2em 1.33em;
+}
+/* line 256, ../sass/pages.scss */
+#content .views-field-field-image img {
+  display: block;
+}
+/* line 261, ../sass/pages.scss */
+#content .views-field-title {
+  overflow-y: hidden;
+  height: 3.1em;
+  display: table;
+}
+/* line 266, ../sass/pages.scss */
+#content .views-field-title h3 {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 272, ../sass/pages.scss */
+#content .views-field-body {
+  overflow-y: hidden;
+  height: 112px;
+}
+/* line 277, ../sass/pages.scss */
+#content .views-field:first-child, #content .views-field:first-child img {
+  border-top: solid #d0d0d0 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 283, ../sass/pages.scss */
+#content .views-field:last-child {
+  border-bottom: solid #d0d0d0 1px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 289, ../sass/pages.scss */
+#content .flex-direction-nav a {
+  top: 35%;
+}
+/* line 293, ../sass/pages.scss */
+#content .flex-control-nav {
+  position: absolute;
+  top: 190px;
+}
+
+/* line 302, ../sass/pages.scss */
+body.page-node #content .panel-col-first .inside {
+  background-color: #fcfcfc;
+  padding: 1.7em;
+  border: solid #d0d0d0 1px;
+  border-radius: 4px;
+}
+
+/* line 311, ../sass/pages.scss */
+.region-highlighted .block:last-child {
+  margin-bottom: 0px;
+}
+
+/* line 317, ../sass/pages.scss */
+.flexslider {
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* line 325, ../sass/pages.scss */
+.breadcrumb {
+  /* The path to the current page in the form of a list of links */
+}
+/* line 326, ../sass/pages.scss */
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 330, ../sass/pages.scss */
+.breadcrumb li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 338, ../sass/pages.scss */
+h1.title {
+  /* The title of the page */
+  margin: 0.23em 0;
+  text-align: center;
+}
+
+/* line 345, ../sass/pages.scss */
+h2.node-title,
+h2.block-title,
+h2.pane-title {
+  /* Pane title */
+  margin: 0.07em 0;
+}
+
+/* line 351, ../sass/pages.scss */
+h2.title,
+h2.comment-form,
+h3.title {
+  /* Comment title */
+  margin: 0;
+}
+
+/* line 355, ../sass/pages.scss */
+tr.even {
+  /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+/* line 359, ../sass/pages.scss */
+tr.odd {
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+/* line 363, ../sass/pages.scss */
+div.messages {
+  /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 1.5em 0;
+  /* Drupal core uses "6px 0" margin */
+}
+/* line 366, ../sass/pages.scss */
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 372, ../sass/pages.scss */
+div.status {
+  /* Normal priority messages */
+}
+
+/* line 376, ../sass/pages.scss */
+div.warning,
+tr.warning {
+  /* Medium priority messages */
+  /* border: 1px solid #f0c020; */
+  /* Drupal core uses: 1px solid #f0c020 */
+}
+
+/* line 381, ../sass/pages.scss */
+div.error,
+tr.error {
+  /* High priority messages. See also the .error declaration below. */
+}
+
+/* line 384, ../sass/pages.scss */
+.error {
+  /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */
+  /* Drupal core uses a #e55 background */
+}
+
+/* line 388, ../sass/pages.scss */
+.warning {
+  /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */
+  /* Drupal core uses a #e09010 background */
+}
+
+/* line 392, ../sass/pages.scss */
+.tabs {
+  /* See also the tabs.css file. */
+}
+
+/* line 395, ../sass/pages.scss */
+.region-help {
+  /* Help text on a page */
+}
+
+/* line 398, ../sass/pages.scss */
+.more-help-link {
+  /* Link to more help */
+}
+
+/* line 401, ../sass/pages.scss */
+.region-content {
+  /* Wrapper for the actual page content */
+}
+
+/* line 404, ../sass/pages.scss */
+ul.inline {
+  /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+}
+/* line 408, ../sass/pages.scss */
+ul.inline li {
+  display: inline;
+  list-style-type: none;
+}
+
+/* line 413, ../sass/pages.scss */
+span.field-label {
+  /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0;
+  /* LTR */
+}
+
+/* line 417, ../sass/pages.scss */
+.item-list .pager {
+  /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+}
+/* line 420, ../sass/pages.scss */
+.item-list .pager li {
+  /* Each page number in the pager list */
+  padding: 0 0.5em;
+}
+
+/* line 425, ../sass/pages.scss */
+.feed-icon {
+  /* The link to the RSS or Atom feed for the current list of content */
+}
+
+/* line 428, ../sass/pages.scss */
+.more-link {
+  /* Aggregator, blog, and forum more link */
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+/*
+ * Footer
+ */
+/* line 458, ../sass/pages.scss */
+#footer-left-right {
+  padding: 7px 0;
+}
+
+/*
+ * Page bottom
+ */
+/* line 466, ../sass/pages.scss */
+.region-bottom {
+  /* Wrapper for any blocks placed in the page bottom region */
+}
+
+/* line 472, ../sass/pages.scss */
+#earthday-donate h2.pane-title,
+#earthday-event h2.pane-title,
+#earthday-shop h2.pane-title {
+  line-height: 1.8em;
+  border-bottom: 1px solid #d0d0d0;
+  color: #66bab7;
+}
+
+/* line 480, ../sass/pages.scss */
+.wide-column h2.pane-title {
+  line-height: 1.8em;
+  background-color: #66bab7;
+  color: #f0f8f5;
+  margin-left: 10px;
+  margin-right: 10px;
+}
