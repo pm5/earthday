@@ -84,6 +84,98 @@ function earthday_shop_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-earthday_shop-field_attached_document'.
+  $fields['node-earthday_shop-field_attached_document'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_attached_document',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'earthday_shop',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 7,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_attached_document',
+      'label' => '附件文件',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'attached_documents',
+        'file_extensions' => 'txt doc docx pdf ppt pptx odt odp',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 'document',
+            'image' => 0,
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
+        'weight' => '7',
+      ),
+    ),
+  );
+
   // Exported field: 'node-earthday_shop-field_contact'.
   $fields['node-earthday_shop-field_contact'] = array(
     'field_config' => array(
@@ -546,7 +638,7 @@ function earthday_shop_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => -5,
+        'weight' => '0',
       ),
     ),
   );
@@ -560,6 +652,7 @@ function earthday_shop_field_default_fields() {
   t('活動網址');
   t('聯絡人/連絡電話');
   t('開始結束時間');
+  t('附件文件');
 
   return $fields;
 }

@@ -34,7 +34,7 @@ function earthday_partner_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '5022',
+        'default_image' => '5167',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',

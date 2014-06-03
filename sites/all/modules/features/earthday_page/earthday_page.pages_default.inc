@@ -43,10 +43,9 @@ function earthday_page_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'earthday_partner' => 'earthday_partner',
-              'earthday_column' => 'earthday_column',
               'earthday_news' => 'earthday_news',
               'earthday_page' => 'earthday_page',
+              'earthday_partner' => 'earthday_partner',
             ),
           ),
           'context' => 'argument_entity_id:node_1',

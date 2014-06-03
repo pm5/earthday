@@ -50,7 +50,7 @@ function earthday_column_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -80,7 +80,169 @@ function earthday_column_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-earthday_column-field_attached_document'.
+  $fields['node-earthday_column-field_attached_document'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_attached_document',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'earthday_column',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'gdoc_field',
+          'settings' => array(),
+          'type' => 'gdoc_field_embedded_doc',
+          'weight' => '5',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_attached_document',
+      'label' => '附件文件',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'attached_documents',
+        'file_extensions' => 'txt doc docx pdf ppt pptx odt odp',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 'document',
+            'image' => 0,
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
         'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-earthday_column-field_author'.
+  $fields['node-earthday_column-field_author'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_author',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '100',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'earthday_column',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '範例：「採訪：陳慶鍾、羅美音；撰稿、攝影、剪輯：陳慶鍾」。',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_plain',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_author',
+      'label' => '作者',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
       ),
     ),
   );
@@ -129,7 +291,7 @@ function earthday_column_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -151,7 +313,7 @@ function earthday_column_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '4',
+        'weight' => '2',
       ),
     ),
   );
@@ -180,7 +342,7 @@ function earthday_column_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => '5167',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -195,7 +357,7 @@ function earthday_column_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -211,7 +373,7 @@ function earthday_column_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => 0,
+        'default_image' => '4996',
         'file_directory' => 'images/earthday-column',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -289,7 +451,7 @@ function earthday_column_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 3,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -318,17 +480,20 @@ function earthday_column_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => -5,
+        'weight' => '0',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('作者');
   t('內文');
   t('圖片');
   t('專欄類型');
   t('標題');
+  t('範例：「採訪：陳慶鍾、羅美音；撰稿、攝影、剪輯：陳慶鍾」。');
+  t('附件文件');
 
   return $fields;
 }

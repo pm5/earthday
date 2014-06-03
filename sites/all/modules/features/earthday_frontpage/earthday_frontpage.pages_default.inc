@@ -185,7 +185,7 @@ function earthday_frontpage_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'link_to_view' => 0,
+      'link_to_view' => 1,
       'more_link' => 0,
       'path' => 'taxonomy/term/%',
       'arguments' => array(
@@ -207,14 +207,46 @@ function earthday_frontpage_default_page_manager_pages() {
       'settings' => NULL,
     );
     $pane->css = array(
-      'css_id' => 'earthday-newsroom',
-      'css_class' => '',
+      'css_id' => '',
+      'css_class' => 'wide-column',
     );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['top'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'top';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'earthday_column-4_stories_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link_to_view' => 1,
+      'more_link' => 0,
+      'path' => 'column',
+      'fields_override' => array(
+        'field_image' => 1,
+        'title' => 1,
+        'body' => 1,
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'wide-column',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['top'][1] = 'new-5';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

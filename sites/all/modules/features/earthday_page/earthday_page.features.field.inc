@@ -84,6 +84,98 @@ function earthday_page_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-earthday_page-field_attached_document'.
+  $fields['node-earthday_page-field_attached_document'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_attached_document',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'earthday_page',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 5,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_attached_document',
+      'label' => '附件文件',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'attached_documents',
+        'file_extensions' => 'txt doc docx pdf ppt pptx odt odp',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 'document',
+            'image' => 0,
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
+        'weight' => '4',
+      ),
+    ),
+  );
+
   // Exported field: 'node-earthday_page-field_category'.
   $fields['node-earthday_page-field_category'] = array(
     'field_config' => array(
@@ -149,7 +241,7 @@ function earthday_page_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -178,7 +270,7 @@ function earthday_page_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => '5167',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -213,7 +305,7 @@ function earthday_page_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => '737',
+        'default_image' => 0,
         'file_directory' => 'images/earthday-page',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -224,13 +316,21 @@ function earthday_page_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'media',
         'settings' => array(
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
           'preview_image_style' => 'earthday-title',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'image_image',
-        'weight' => '2',
+        'type' => 'media_generic',
+        'weight' => '1',
       ),
     ),
   );
@@ -290,7 +390,7 @@ function earthday_page_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -363,7 +463,7 @@ function earthday_page_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => -5,
+        'weight' => '0',
       ),
     ),
   );
@@ -375,6 +475,7 @@ function earthday_page_field_default_fields() {
   t('圖片');
   t('排序');
   t('標題');
+  t('附件文件');
 
   return $fields;
 }

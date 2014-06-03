@@ -27,7 +27,7 @@ function earthday_column_views_api() {
 function earthday_column_node_info() {
   $items = array(
     'earthday_column' => array(
-      'name' => t('地球日專欄'),
+      'name' => t('積綠專欄'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
