@@ -23,7 +23,6 @@ function earthday_column_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = '積綠專欄';
-  $handler->display->display_options['css_class'] = 'grid-4-col clearfix';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = '更多';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -180,6 +179,8 @@ function earthday_column_views_default_views() {
 
   /* Display: Content pane: 四格 */
   $handler = $view->new_display('panel_pane', 'Content pane: 四格', '4_stories_pane');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'grid-4-col clearfix';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
