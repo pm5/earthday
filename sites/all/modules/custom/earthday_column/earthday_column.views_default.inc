@@ -39,6 +39,7 @@ function earthday_column_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = '每頁的項目數';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- 全部 -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = '位移';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« 第一頁';
@@ -205,7 +206,7 @@ function earthday_column_views_default_views() {
     t('排序依據'),
     t('遞增'),
     t('遞減'),
-    t('Items per page'),
+    t('每頁的項目數'),
     t('- 全部 -'),
     t('位移'),
     t('« 第一頁'),
@@ -248,14 +249,27 @@ function earthday_column_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = '遞減';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = '每頁的項目數';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- 全部 -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = '位移';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« 第一頁';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ 上一頁';
   $handler->display->display_options['pager']['options']['tags']['next'] = '下一頁 ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = '最後一頁 »';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   /* 欄位: 分類項目: 名稱 */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -290,7 +304,7 @@ function earthday_column_views_default_views() {
     t('排序依據'),
     t('遞增'),
     t('遞減'),
-    t('Items per page'),
+    t('每頁的項目數'),
     t('- 全部 -'),
     t('位移'),
     t('« 第一頁'),
