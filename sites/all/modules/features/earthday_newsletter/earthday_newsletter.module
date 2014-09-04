@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the earthday_newsletter feature.
+ */
+
+include_once 'earthday_newsletter.features.inc';
