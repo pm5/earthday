@@ -39,6 +39,7 @@ function earthday_join_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = '每頁的項目數';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- 全部 -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = '位移';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« 第一頁';
@@ -297,7 +298,7 @@ function earthday_join_views_default_views() {
     t('排序依據'),
     t('遞增'),
     t('遞減'),
-    t('Items per page'),
+    t('每頁的項目數'),
     t('- 全部 -'),
     t('位移'),
     t('« 第一頁'),

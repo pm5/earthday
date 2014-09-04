@@ -110,7 +110,7 @@ function earthday_news_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '-45',
     'parent_path' => 'taxonomy/term/3',
   );
   // Exported menu link: navigation:node/add/earthday-news
