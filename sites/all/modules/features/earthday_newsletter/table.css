@@ -1,0 +1,10 @@
+#content .view.center table .views-field {
+  height: 3.1em;
+  line-height: 3.1em;
+  padding: 0 0.9em;
+  display: block;
+}
+
+#content .view.center table {
+  margin: 0 auto;
+}

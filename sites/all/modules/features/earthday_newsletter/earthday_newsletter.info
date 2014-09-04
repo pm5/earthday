@@ -17,3 +17,4 @@ features[field][] = node-earthday_newsletter-field_newsletter_date
 features[field][] = node-earthday_newsletter-field_newsletter_link
 features[field][] = node-earthday_newsletter-field_newsletter_number
 features[node][] = earthday_newsletter
+stylesheets[all][] = table.css
