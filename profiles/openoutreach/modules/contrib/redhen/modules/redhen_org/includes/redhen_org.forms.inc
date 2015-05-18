@@ -27,19 +27,6 @@ function redhen_org_org_form($form, &$form_state, $org) {
     '#required' => TRUE,
     '#weight' => -6,
   );
-  // Machine-readable type name.
-  $form['name'] = array(
-    '#type' => 'machine_name',
-    '#default_value' => isset($org->name) ? $org->name : '',
-    '#maxlength' => 32,
-//    '#disabled' => $org->locked && $op != 'clone',
-    '#machine_name' => array(
-      'exists' => 'redhen_org_load',
-      'source' => array('label'),
-    ),
-    '#description' => t('A unique machine-readable name for this redhen organization. It must only contain lowercase letters, numbers, and underscores.'),
-  );
-
 
   // Add the field related form elements.
   $form_state['redhen_org'] = $org;
@@ -75,13 +62,12 @@ function redhen_org_org_form_validate($form, &$form_state) {
 function redhen_org_org_form_submit($form, &$form_state) {
   $org = &$form_state['redhen_org'];
 
-  // Set the org's author uid
+  // Set the org's author uid.
   global $user;
   $org->author_uid = $user->uid;
 
   // Save default parameters back into the $org object.
   $org->label = $form_state['values']['label'];
-  $org->name = $form_state['values']['name'];
 
   // Notify field widgets.
   field_attach_submit('redhen_org', $org, $form, $form_state);
@@ -90,7 +76,7 @@ function redhen_org_org_form_submit($form, &$form_state) {
   $org->save();
 
   drupal_set_message(t('Organization %label saved.', array('%label' => $org->label)));
-  $form_state['redirect'] = 'redhen/org/' . $org->identifier();
+  $form_state['redirect'] = 'redhen/org/' . $org->internalIdentifier();
 }
 
 /**
@@ -124,10 +110,18 @@ function redhen_org_org_delete_form($form, &$form_state, $org) {
 function redhen_org_org_delete_form_submit($form, &$form_state) {
   $org = $form_state['redhen_org'];
 
-  redhen_org_delete_multiple(array($org->org_id));
-  drupal_set_message(t('%label has been deleted.', array('%label' => $org->label)));
-  watchdog('redhen_org', 'Deleted organization %label.', array('%label' => $org->label), WATCHDOG_NOTICE);
-  $form_state['redirect'] = 'redhen/org';
+  if ($org->isDefaultRevision()) {
+    redhen_org_delete_multiple(array($org->org_id));
+    drupal_set_message(t('%label has been deleted.', array('%label' => $org->label)));
+    watchdog('redhen_org', 'Deleted organization %label.', array('%label' => $org->label), WATCHDOG_NOTICE);
+    $form_state['redirect'] = 'redhen/org';
+  }
+  else {
+    entity_revision_delete('redhen_org', $org->revision_id);
+    drupal_set_message(t('Revision %label has been deleted.', array('%label' => $org->label)));
+    watchdog('redhen_org', 'Deleted organization revision %label.', array('%label' => $org->label), WATCHDOG_NOTICE);
+    $form_state['redirect'] = 'redhen/org/' . $org->org_id . '/revisions';
+  }
 }
 
 /**
@@ -146,7 +140,7 @@ function redhen_org_org_archive_form($form, &$form_state, $org) {
   $form = confirm_form($form,
     t('Are you sure you want to archive %label?', array('%label' => $org->label)),
     entity_uri('redhen_org', $org),
-    '<p>' . t('Archiving this organization cannot be undone.') . '</p>',
+    '<p>' . t('Archive this organization.') . '</p>',
     t('Archive'),
     t('Cancel'),
     'confirm'
@@ -172,12 +166,48 @@ function redhen_org_org_archive_form_submit($form, &$form_state) {
 }
 
 /**
- * Form callback: confirmation form for changing the primary contact.
+ * Form callback: confirmation form for unarchiving an organization.
  *
  * @param $org
- *   The organization object to be deleted.
- * @param $contact
- *   The contact being made the primary contact.
+ *   The org object to be activated.
+ *
+ * @see confirm_form()
+ */
+function redhen_org_org_unarchive_form($form, &$form_state, $org) {
+  $form_state['redhen_org'] = $org;
+
+  $form['#submit'][] = 'redhen_org_org_unarchive_form_submit';
+
+  $form = confirm_form($form,
+    t('Are you sure you want to unarchive %label?', array('%label' => $org->label())),
+    entity_uri('redhen_org', $org),
+    '<p>' . t('Activate this organization.') . '</p>',
+    t('Unarchive'),
+    t('Cancel'),
+    'confirm'
+  );
+
+  return $form;
+}
+
+/**
+ * Submit callback for redhen_org_org_unarchive_form().
+ */
+function redhen_org_org_unarchive_form_submit($form, &$form_state) {
+  $org = $form_state['redhen_org'];
+
+  if ($org->setState(REDHEN_STATE_ACTIVE)) {
+    drupal_set_message(t('%label has been unarchived.', array('%label' => $org->label())));
+  }
+  else {
+    drupal_set_message(t('%label was not unarchived.', array('%label' => $org->label())), WATCHDOG_ERROR);
+  }
+  $url = entity_uri($org->entityType(), $org);
+  $form_state['redirect'] = $url['path'];
+}
+
+/**
+ * Form callback: confirmation form for changing the primary contact.
  *
  * @see confirm_form()
  */
@@ -226,16 +256,15 @@ function redhen_org_set_primary_form_submit($form, &$form_state) {
   if ($org->setPrimaryContact($contact)) {
     drupal_set_message(t('%contact_name has been set as the primary contact for %org_name.', array(
       '%contact_name' => $contact_name,
-      '%org_name' => $org_name
+      '%org_name' => $org_name,
     )));
   }
   else {
     drupal_set_message(t('Unable to set %contact_name as the primary contact for %org_name.', array(
       '%contact_name' => $contact_name,
-      '%org_name' => $org_name
+      '%org_name' => $org_name,
     )));
   }
 
   drupal_goto(drupal_get_destination());
-
 }

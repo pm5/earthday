@@ -19,7 +19,7 @@ function openoutreach_block_info() {
   $blocks['powered-by'] = array(
     'info' => t('Powered by Open Outreach'),
     'weight' => '10',
-    'cache' => DRUPAL_NO_CACHE,
+    'cache' => DRUPAL_CACHE_PER_ROLE,
   );
   return $blocks;
 }
@@ -52,7 +52,7 @@ function openoutreach_block_view() {
  * Unset distracting messages at install time.
  */
 function openoutreach_modules_enabled($modules) {
-  if (drupal_installation_attempted() && array_intersect($modules, array('captcha', 'date_api', 'superfish'))) {
+  if (drupal_installation_attempted() && array_intersect($modules, array('captcha', 'date_api', 'metatag', 'superfish'))) {
     drupal_get_messages('status');
     drupal_get_messages('warning');
   }

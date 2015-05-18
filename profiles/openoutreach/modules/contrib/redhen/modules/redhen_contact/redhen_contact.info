@@ -11,16 +11,18 @@ files[] = lib/redhen_contact.controller.inc
 files[] = lib/redhen_contact.entity.inc
 files[] = lib/redhen_contact.metadata.inc
 files[] = lib/redhen_contact.views.inc
+files[] = lib/redhen_contact.inline_entity_form.inc
 files[] = lib/redhen_contact_type.controller.inc
 files[] = lib/redhen_contact_type.entity.inc
 files[] = lib/redhen_contact_type.ui_controller.inc
+files[] = plugins/selection/RedhenContactSelectionHandler.class.php
 
 ; Tests
 ;files[] = tests/redhen_contact.test
 
-; Information added by drupal.org packaging script on 2013-10-24
-version = "7.x-1.6"
+; Information added by Drupal.org packaging script on 2015-01-26
+version = "7.x-1.9"
 core = "7.x"
 project = "redhen"
-datestamp = "1382644828"
+datestamp = "1422301982"
 

@@ -17,13 +17,13 @@ function debut_location_openlayers_styles() {
   $openlayers_styles->title = 'Location type';
   $openlayers_styles->description = 'Location type icon based on taxonomy term.';
   $openlayers_styles->data = array(
-    'externalGraphic' => '${uri_rendered}',
+    'externalGraphic' => '${uri}',
     'pointRadius' => 12,
     'fillColor' => '#888888',
     'strokeColor' => '#222222',
     'strokeWidth' => 4,
     'fillOpacity' => 0.5,
-    'strokeOpacity' => 0.7,
+    'strokeOpacity' => 0.6999999999999999555910790149937383830547332763671875,
     'strokeLinecap' => 'round',
     'strokeDashstyle' => 'solid',
     'graphicOpacity' => 1,
