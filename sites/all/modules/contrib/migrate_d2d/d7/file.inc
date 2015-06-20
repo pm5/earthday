@@ -42,7 +42,7 @@ class DrupalFile7Migration extends DrupalFileMigration {
     $query = Database::getConnection('default', $this->sourceConnection)
              ->select('file_managed', 'f')
              ->fields('f')
-             ->orderBy('timestamp');
+             ->orderBy($this->newOnly ? 'f.fid' : 'f.timestamp');
     return $query;
   }
 
@@ -69,16 +69,18 @@ class DrupalFile7Migration extends DrupalFileMigration {
     // Do our best to apply the appropriate file_class to the import of this
     // "file". Assume if we don't recognize a special case, we'll treat it as
     // a real file to be copied.
-    switch ($row->filemime) {
-      case 'video/oembed':
+    if ($row->filemime == 'video/youtube' && class_exists('MigrateExtrasFileYoutube')) {
+      if (strpos($row->uri, 'youtube://') !== FALSE) {
         $this->destination->setFileClass('MigrateFileUriAsIs');
-        break;
-      case 'video/youtube':
+      } else {
         $this->destination->setFileClass('MigrateExtrasFileYoutube');
-        break;
-      default:
-        $this->destination->setFileClass('MigrateFileUri');
-        break;
+      }
+    }
+    elseif (preg_match('|/oembed$|i', $row->filemime)) {
+      $this->destination->setFileClass('MigrateFileUriAsIs');
+    }
+    else {
+      $this->destination->setFileClass('MigrateFileUri');
     }
   }
 
