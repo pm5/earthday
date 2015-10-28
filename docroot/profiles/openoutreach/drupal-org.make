@@ -1,5 +1,5 @@
 api = 2
-core = 7.39
+core = 7.41
 
 ; Projects specific to Open Outreach.
 projects[adaptivetheme][subdir] = "contrib"
@@ -36,7 +36,7 @@ libraries[superfish][download][type] = "get"
 libraries[superfish][download][url] = "https://github.com/mehrpadin/Superfish-for-Drupal/zipball/master"
 
 projects[addressfield][subdir] = contrib
-projects[addressfield][version] = 1.1
+projects[addressfield][version] = 1.2
 projects[advanced_forum][subdir] = contrib
 projects[advanced_forum][version] = 2.5
 projects[advanced_help][subdir] = contrib
@@ -54,7 +54,8 @@ projects[content_access][version] = 1.2-beta2
 projects[context][subdir] = contrib
 projects[context][version] = 3.6
 projects[date][subdir] = contrib
-projects[date][version] = 2.9-rc1
+projects[date][version] = 2.9
+projects[date][patch][http://www.drupal.org/files/issues/calendar_pager_broken-2375235-35.patch] = http://www.drupal.org/files/issues/calendar_pager_broken-2375235-35.patch
 projects[date_ical][subdir] = contrib
 projects[date_ical][version] = 3.5
 projects[debut_article][subdir] = contrib
@@ -98,7 +99,7 @@ projects[entityreference][version] = 1.1
 projects[eva][subdir] = contrib
 projects[eva][version] = 1.2
 projects[features][subdir] = contrib
-projects[features][version] = 2.6
+projects[features][version] = 2.7
 projects[file_admin][subdir] = contrib
 projects[file_admin][version] = 1.0-beta9
 projects[file_entity][subdir] = contrib
@@ -145,7 +146,7 @@ projects[openlayers][version] = 2.0-beta9
 ; Fix broken link in .make file.
 projects[openlayers][patch][http://www.drupal.org/files/issues/openlayers-7.x-2.0-beta9_makefile_release_patch-2257461-5.patch] = https://www.drupal.org/files/issues/openlayers-7.x-2.0-beta9_makefile_release_patch-2257461-5.patch
 projects[pathauto][subdir] = contrib
-projects[pathauto][version] = 1.2
+projects[pathauto][version] = 1.3
 projects[profile2][subdir] = contrib
 projects[profile2][version] = 1.3
 projects[proj4js][subdir] = contrib
@@ -155,7 +156,7 @@ projects[redhen][version] = 1.9
 projects[redhen_membership][subdir] = contrib
 projects[redhen_membership][version] = 1.0
 projects[registration][subdir] = contrib
-projects[registration][version] = 1.5
+projects[registration][version] = 1.6
 projects[relation][subdir] = contrib
 projects[relation][version] = 1.0
 projects[remote_stream_wrapper][subdir] = contrib
