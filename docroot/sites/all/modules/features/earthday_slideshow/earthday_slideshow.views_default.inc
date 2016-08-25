@@ -38,7 +38,7 @@ function earthday_slideshow_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* 欄位: 內容: 路徑 */
+  /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -46,7 +46,7 @@ function earthday_slideshow_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* 欄位: 內容: 連結 */
+  /* Field: Content: 連結 */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -56,7 +56,7 @@ function earthday_slideshow_views_default_views() {
   $handler->display->display_options['fields']['field_link']['empty'] = '[path]';
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['type'] = 'link_plain';
-  /* 欄位: 欄位: 圖片 */
+  /* Field: Field: 圖片 */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -73,7 +73,7 @@ function earthday_slideshow_views_default_views() {
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image']['field_api_classes'] = TRUE;
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: 標題 */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
   $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
@@ -86,7 +86,7 @@ function earthday_slideshow_views_default_views() {
   $handler->display->display_options['fields']['title_field']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title_field']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title_field']['field_api_classes'] = TRUE;
-  /* 欄位: 內容: 內文 */
+  /* Field: Content: 內文 */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -101,7 +101,7 @@ function earthday_slideshow_views_default_views() {
     'trim_length' => '60',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* 欄位: 內容: 輪播文字 */
+  /* Field: 內容: 輪播文字 */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -112,17 +112,17 @@ function earthday_slideshow_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_class'] = 'slideshow-text';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = '0';
-  /* Sort criterion: 內容: 置頂 */
+  /* Sort criterion: Content: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
-  /* Sort criterion: 內容: 發表日期 */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: 內容: 分類 (field_category) */
+  /* Contextual filter: Content: 分類 (field_category) */
   $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
   $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
   $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
@@ -135,20 +135,20 @@ function earthday_slideshow_views_default_views() {
     1 => 'AND',
     2 => 'OR',
   );
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 首頁推薦 */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 2;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -156,7 +156,7 @@ function earthday_slideshow_views_default_views() {
     'earthday_slideshow' => 'earthday_slideshow',
   );
   $handler->display->display_options['filters']['type']['group'] = 2;
-  /* Filter criterion: 內容: 分類 (field_category) */
+  /* Filter criterion: Content: 分類 (field_category) */
   $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
   $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
   $handler->display->display_options['filters']['field_category_tid']['field'] = 'field_category_tid';
@@ -165,7 +165,7 @@ function earthday_slideshow_views_default_views() {
     0 => '5',
   );
   $handler->display->display_options['filters']['field_category_tid']['vocabulary'] = 'categories';
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
   $handler->display->display_options['filters']['type_1']['table'] = 'node';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
@@ -210,6 +210,7 @@ function earthday_slideshow_views_default_views() {
     t('[title_field]'),
     t('所有'),
     t('Content pane'),
+    t('more'),
     t('Earthday TW'),
   );
   $export['earthday_slideshow'] = $view;

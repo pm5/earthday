@@ -77,7 +77,14 @@ function earthday_newsletter_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* 欄位: 內容: 電子報備份連結 */
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<!-- This region is intentionally left empty. -->';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  /* Field: Content: 電子報備份連結 */
   $handler->display->display_options['fields']['field_newsletter_link']['id'] = 'field_newsletter_link';
   $handler->display->display_options['fields']['field_newsletter_link']['table'] = 'field_data_field_newsletter_link';
   $handler->display->display_options['fields']['field_newsletter_link']['field'] = 'field_newsletter_link';
@@ -88,7 +95,7 @@ function earthday_newsletter_views_default_views() {
   $handler->display->display_options['fields']['field_newsletter_link']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_newsletter_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_newsletter_link']['click_sort_column'] = 'url';
-  /* 欄位: 內容: 期數 */
+  /* Field: Content: 期數 */
   $handler->display->display_options['fields']['field_newsletter_number']['id'] = 'field_newsletter_number';
   $handler->display->display_options['fields']['field_newsletter_number']['table'] = 'field_data_field_newsletter_number';
   $handler->display->display_options['fields']['field_newsletter_number']['field'] = 'field_newsletter_number';
@@ -101,7 +108,7 @@ function earthday_newsletter_views_default_views() {
   $handler->display->display_options['fields']['field_newsletter_number']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_newsletter_number']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_newsletter_number']['field_api_classes'] = TRUE;
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -113,18 +120,33 @@ function earthday_newsletter_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Sort criterion: 內容: 發報日期 (field_newsletter_date) */
+  /* Sort criterion: Content: 發報日期 (field_newsletter_date) */
   $handler->display->display_options['sorts']['field_newsletter_date_value']['id'] = 'field_newsletter_date_value';
   $handler->display->display_options['sorts']['field_newsletter_date_value']['table'] = 'field_data_field_newsletter_date';
   $handler->display->display_options['sorts']['field_newsletter_date_value']['field'] = 'field_newsletter_date_value';
-  /* Filter criterion: 內容: 已發表 */
+  /* Contextual filter: Content: 年份 (field_newsletter_year) */
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['id'] = 'field_newsletter_year_value';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['table'] = 'field_data_field_newsletter_year';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['field'] = 'field_newsletter_year_value';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['exception']['title'] = '所有';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['title'] = '%1 地球日電子報';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['default_argument_skip_url'] = TRUE;
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['granularity'] = 'year';
+  $handler->display->display_options['arguments']['field_newsletter_year_value']['use_fromto'] = 'no';
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -134,6 +156,7 @@ function earthday_newsletter_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['path'] = 'newsletter';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = '地球日電子報';
@@ -141,6 +164,31 @@ function earthday_newsletter_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'pane');
+  $handler->display->display_options['pane_category']['name'] = 'Earthday TW';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_newsletter_year_value' => array(
+      'type' => 'panel',
+      'context' => 'node_add_form.type',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => '內容: 年份 (field_newsletter_year)',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $translatables['earthday_newsletter'] = array(
     t('Master'),
     t('地球日電子報'),
@@ -157,7 +205,13 @@ function earthday_newsletter_views_default_views() {
     t('‹ 上一頁'),
     t('下一頁 ›'),
     t('最後一頁 »'),
+    t('<!-- This region is intentionally left empty. -->'),
+    t('所有'),
+    t('%1 地球日電子報'),
     t('Page'),
+    t('more'),
+    t('Content pane'),
+    t('Earthday TW'),
   );
   $export['earthday_newsletter'] = $view;
 

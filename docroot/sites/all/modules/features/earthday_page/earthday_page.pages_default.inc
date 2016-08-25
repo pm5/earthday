@@ -17,7 +17,7 @@ function earthday_page_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -27;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'Panels',
     'no_blocks' => 0,
@@ -67,10 +67,11 @@ function earthday_page_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->uuid = '5c29af0d-eead-4e1b-810f-abe1346f80a5';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-c054739c-c9f1-4253-b109-6bccfef0134d';
     $pane->panel = 'left';
     $pane->type = 'entity_view';
     $pane->subtype = 'node';
@@ -90,10 +91,11 @@ function earthday_page_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = 'c054739c-c9f1-4253-b109-6bccfef0134d';
+    $display->content['new-c054739c-c9f1-4253-b109-6bccfef0134d'] = $pane;
+    $display->panels['left'][0] = 'new-c054739c-c9f1-4253-b109-6bccfef0134d';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-a897a5b1-fb4d-43fc-b924-1969179afb9c';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'taxonomy_term-related_pane';
@@ -126,10 +128,11 @@ function earthday_page_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['right'][0] = 'new-2';
+    $pane->uuid = 'a897a5b1-fb4d-43fc-b924-1969179afb9c';
+    $display->content['new-a897a5b1-fb4d-43fc-b924-1969179afb9c'] = $pane;
+    $display->panels['right'][0] = 'new-a897a5b1-fb4d-43fc-b924-1969179afb9c';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-c054739c-c9f1-4253-b109-6bccfef0134d';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 
@@ -167,10 +170,11 @@ function earthday_page_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '%term:name';
+  $display->uuid = 'f90b5979-5f42-4e97-8660-3b032d437cdc';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-ec1c74c1-bf80-4c37-8a3d-c18a3432a728';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'taxonomy_term-pane';
@@ -207,8 +211,9 @@ function earthday_page_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][0] = 'new-3';
+    $pane->uuid = 'ec1c74c1-bf80-4c37-8a3d-c18a3432a728';
+    $display->content['new-ec1c74c1-bf80-4c37-8a3d-c18a3432a728'] = $pane;
+    $display->panels['middle'][0] = 'new-ec1c74c1-bf80-4c37-8a3d-c18a3432a728';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

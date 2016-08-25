@@ -31,10 +31,11 @@ function earthday_slideshow_default_panels_mini() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = '7bc34d1c-14a3-4e2d-817e-5bbc24f61304';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-d3603972-8920-4a8d-969e-7466994885f7';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'earthday_slideshow-earthday_slideshow_pane';
@@ -72,10 +73,11 @@ function earthday_slideshow_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    $pane->uuid = 'd3603972-8920-4a8d-969e-7466994885f7';
+    $display->content['new-d3603972-8920-4a8d-969e-7466994885f7'] = $pane;
+    $display->panels['middle'][0] = 'new-d3603972-8920-4a8d-969e-7466994885f7';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-d3603972-8920-4a8d-969e-7466994885f7';
   $mini->display = $display;
   $export['highlighted'] = $mini;
 
